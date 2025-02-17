@@ -28,10 +28,12 @@ Metode eliminasi adalah teknik penyelesaian sistem persamaan linier dengan mengh
 4. Ulangi langkah di atas hingga sistem menjadi lebih sederhana dan mudah diselesaikan.
 
 **Contoh:**
-$$\begin{cases}
+
+$\begin{cases}
 2x + 3y = 8 \\
 4x - y = 2
-\end{cases}$$
+\end{cases}$
+
 Dengan metode eliminasi, kalikan persamaan kedua dengan 3 dan jumlahkan dengan persamaan pertama untuk menghilangkan y.
 
 ### Eliminasi Gauss
@@ -41,10 +43,12 @@ Eliminasi Gauss adalah metode yang digunakan untuk menyederhanakan sistem persam
 3. Dari bentuk eselon baris, gunakan substitusi balik untuk menemukan nilai variabel.
 
 **Contoh:**
- \begin{bmatrix}
+
+$\begin{bmatrix}
 2 & 3 & | 8 \\
 4 & -1 & | 2
-\end{bmatrix}
+\end{bmatrix}$
+
 Lakukan operasi baris hingga diperoleh bentuk eselon baris.
 
 ### Solusi Grafik
@@ -58,10 +62,10 @@ Metode solusi grafik digunakan untuk sistem persamaan linier dengan dua variabel
 **Contoh:**
 Untuk sistem persamaan:
 
-\begin{cases}
+$\begin{cases}
 y = 2x + 3\\
 y = -x + 15
-\end{cases}
+\end{cases}$
 
 Gambarkan kedua garis pada bidang koordinat dan tentukan titik potongnya.
 
