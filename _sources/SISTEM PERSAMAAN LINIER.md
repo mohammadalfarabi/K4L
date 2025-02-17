@@ -59,13 +59,13 @@ Metode solusi grafik digunakan untuk sistem persamaan linier dengan dua variabel
 Untuk sistem persamaan:
 
 \begin{cases}
-x + y = 5 \\
-y = 4x - 2
+y = 2x + 3\\
+y = -x + 15
 \end{cases}
 
 Gambarkan kedua garis pada bidang koordinat dan tentukan titik potongnya.
 
-<iframe src="https://www.geogebra.org/calculator/u364rskv?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+<iframe src="https://www.geogebra.org/calculator/mgvjdb7s?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
 
 Metode grafik memberikan representasi visual dari solusi sistem persamaan linier, namun kurang praktis untuk sistem dengan lebih dari dua variabel.
 
