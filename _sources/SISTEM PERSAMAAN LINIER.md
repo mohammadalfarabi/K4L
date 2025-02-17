@@ -44,12 +44,34 @@ Eliminasi Gauss adalah metode yang digunakan untuk menyederhanakan sistem persam
 
 **Contoh:**
 
-$\begin{bmatrix}
-2 & 3 & | 8 \\
-4 & -1 & | 2
+$\begin{bmatrix} 
+1 & -2 & | -3 \\ 
+1 & 1 & | 15 
 \end{bmatrix}$
 
-Lakukan operasi baris hingga diperoleh bentuk eselon baris.
+1. Eliminasi elemen pertama dari baris kedua dengan $R_2 \leftarrow R_2 - R_1$:
+
+   $\begin{bmatrix} 
+   1 & -2 & | -3 \\ 
+   0 & 3 & | 18 
+   \end{bmatrix}$
+   
+2. Bagi baris kedua dengan 3 agar $y$ menjadi 1:
+   
+   $\begin{bmatrix} 
+   1 & -2 & | -3 \\ 
+   0 & 1 & | 6 
+   \end{bmatrix}$
+   
+3. Gunakan \( R_1 \leftarrow R_1 + 2R_2 \) untuk menghilangkan elemen kedua di baris pertama:
+   
+   $\begin{bmatrix} 
+   1 & 0 & | 4 \\ 
+   0 & 1 & | 6 
+   \end{bmatrix}$
+   
+
+Sehingga diperoleh ** $x = 4$ dan $y = 11$ **.
 
 ### Solusi Grafik
 Metode solusi grafik digunakan untuk sistem persamaan linier dengan dua variabel. Langkah-langkahnya adalah:
@@ -68,4 +90,5 @@ y = -x + 15
 \end{cases}$
 
 <iframe src="https://www.geogebra.org/calculator/nsjfzexc?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
 

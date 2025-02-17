@@ -425,11 +425,31 @@
 <li><p>Dari bentuk eselon baris, gunakan substitusi balik untuk menemukan nilai variabel.</p></li>
 </ol>
 <p><strong>Contoh:</strong></p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-2 &amp; 3 &amp; | 8 \\
-4 &amp; -1 &amp; | 2
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
+1 &amp; -2 &amp; | -3 \\ 
+1 &amp; 1 &amp; | 15 
 \end{bmatrix}\)</span></p>
-<p>Lakukan operasi baris hingga diperoleh bentuk eselon baris.</p>
+<ol class="arabic">
+<li><p>Eliminasi elemen pertama dari baris kedua dengan <span class="math notranslate nohighlight">\(R_2 \leftarrow R_2 - R_1\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
+1 &amp; -2 &amp; | -3 \\ 
+0 &amp; 3 &amp; | 18 
+\end{bmatrix}\)</span></p>
+</li>
+<li><p>Bagi baris kedua dengan 3 agar <span class="math notranslate nohighlight">\(y\)</span> menjadi 1:</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
+1 &amp; -2 &amp; | -3 \\ 
+0 &amp; 1 &amp; | 6 
+\end{bmatrix}\)</span></p>
+</li>
+<li><p>Gunakan ( R_1 \leftarrow R_1 + 2R_2 ) untuk menghilangkan elemen kedua di baris pertama:</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
+1 &amp; 0 &amp; | 4 \\ 
+0 &amp; 1 &amp; | 6 
+\end{bmatrix}\)</span></p>
+</li>
+</ol>
+<p>Sehingga diperoleh ** <span class="math notranslate nohighlight">\(x = 4\)</span> dan <span class="math notranslate nohighlight">\(y = 11\)</span> **.</p>
 </section>
 <section id="solusi-grafik">
 <h3>Solusi Grafik<a class="headerlink" href="#solusi-grafik" title="Link to this heading">#</a></h3>
