@@ -30,11 +30,22 @@ Metode eliminasi adalah teknik penyelesaian sistem persamaan linier dengan mengh
 **Contoh:**
 
 $\begin{cases}
-2x + 3y = 8 \\
-4x - y = 2
+y = 2x + 3 \\
+x + y = 15
 \end{cases}$
+ 
+Langkah-langkah:  
+1. Substitusi $y = 2x + 3$ ke persamaan kedua:
+   $x + (2x + 3) = 15$
+2. Sederhanakan:
+   $x + 2x + 3 = 15$
+   $3x + 3 = 15$
+   $3x = 12$
+   $x = 4$
+3. Substitusi $x = 4$ ke $y = 2x + 3$:
+   $y = 2(4) + 3 = 8 + 3 = 11$
 
-Dengan metode eliminasi, kalikan persamaan kedua dengan 3 dan jumlahkan dengan persamaan pertama untuk menghilangkan y.
+**Solusi: $(4,11)$**
 
 ### Eliminasi Gauss
 Eliminasi Gauss adalah metode yang digunakan untuk menyederhanakan sistem persamaan linier ke dalam bentuk eselon baris. Langkah-langkahnya adalah:
