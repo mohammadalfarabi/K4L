@@ -69,7 +69,7 @@ y = -x + 15
 
 Gambarkan kedua garis pada bidang koordinat dan tentukan titik potongnya.
 
-<iframe src="https://www.geogebra.org/calculator/mgvjdb7s?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+<iframe scrolling="no" title="Untitled" src="https://www.geogebra.org/material/iframe/id/mgvjdb7s/width/1920/height/898/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1920px" height="898px" style="border:0px;"> </iframe>
 
 Metode grafik memberikan representasi visual dari solusi sistem persamaan linier, namun kurang praktis untuk sistem dengan lebih dari dua variabel.
 
