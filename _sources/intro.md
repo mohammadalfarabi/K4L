@@ -30,11 +30,22 @@ Metode eliminasi adalah teknik penyelesaian sistem persamaan linier dengan mengh
 **Contoh:**
 
 $\begin{cases}
-2x + 3y = 8 \\
-4x - y = 2
+y = 2x + 3 \\
+x + y = 15
 \end{cases}$
 
-Dengan metode eliminasi, kalikan persamaan kedua dengan 3 dan jumlahkan dengan persamaan pertama untuk menghilangkan y.
+Langkah-langkah:  
+1. Substitusi $( y = 2x + 3 )$ ke persamaan kedua:
+   $x + (2x + 3) = 15$
+2. Sederhanakan:
+   $x + 2x + 3 = 15$
+   $3x + 3 = 15$
+   $3x = 12$
+   $x = 4$
+3. Substitusi $( x = 4 \) ke \( y = 2x + 3 )$:
+   $y = 2(4) + 3 = 8 + 3 = 11$
+
+**Solusi: $(4,11)$**
 
 ### Eliminasi Gauss
 Eliminasi Gauss adalah metode yang digunakan untuk menyederhanakan sistem persamaan linier ke dalam bentuk eselon baris. Langkah-langkahnya adalah:
@@ -44,12 +55,35 @@ Eliminasi Gauss adalah metode yang digunakan untuk menyederhanakan sistem persam
 
 **Contoh:**
 
-$\begin{bmatrix}
-2 & 3 & | 8 \\
-4 & -1 & | 2
+$\begin{bmatrix} 
+1 & -2 & | -3 \\ 
+1 & 1 & | 15 
 \end{bmatrix}$
 
-Lakukan operasi baris hingga diperoleh bentuk eselon baris.
+Langkah-langkah: 
+1. Eliminasi elemen pertama dari baris kedua dengan $R_2 \leftarrow R_2 - R_1$:
+
+   $\begin{bmatrix} 
+   1 & -2 & | -3 \\ 
+   0 & 3 & | 18 
+   \end{bmatrix}$
+   
+2. Bagi baris kedua dengan 3 agar $y$ menjadi 1:
+   
+   $\begin{bmatrix} 
+   1 & -2 & | -3 \\ 
+   0 & 1 & | 6 
+   \end{bmatrix}$
+   
+3. Gunakan \( R_1 \leftarrow R_1 + 2R_2 \) untuk menghilangkan elemen kedua di baris pertama:
+   
+   $\begin{bmatrix} 
+   1 & 0 & | 4 \\ 
+   0 & 1 & | 6 
+   \end{bmatrix}$
+   
+
+Sehingga diperoleh ** $x = 4$ dan $y = 11$ **.
 
 ### Solusi Grafik
 Metode solusi grafik digunakan untuk sistem persamaan linier dengan dua variabel. Langkah-langkahnya adalah:
