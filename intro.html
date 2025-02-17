@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SISTEM PERSAMAAN LINIER &#8212; Mas KAL</title>
+    <title>&lt;no title&gt; &#8212; Mas KAL</title>
   
   
   
@@ -60,8 +60,6 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -169,10 +167,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">SISTEM PERSAMAAN LINIER</a></li>
-</ul>
-
+        
     </div>
 </nav></div>
     </div>
@@ -353,7 +348,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>SISTEM PERSAMAAN LINIER</h1>
+    <h1><no title></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -362,15 +357,9 @@
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-sistem-persamaan-linier">Definisi Sistem Persamaan Linier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-persamaan-linier">Solusi Persamaan Linier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi">Eliminasi</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">Eliminasi Gauss</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-grafik">Solusi Grafik</a></li>
+                <ul class="simple visible nav section-nav flex-column">
 </ul>
-</li>
-</ul>
+
             </nav>
         </div>
     </div>
@@ -381,110 +370,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linier">
-<h1>SISTEM PERSAMAAN LINIER<a class="headerlink" href="#sistem-persamaan-linier" title="Link to this heading">#</a></h1>
-<section id="definisi-sistem-persamaan-linier">
-<h2>Definisi Sistem Persamaan Linier<a class="headerlink" href="#definisi-sistem-persamaan-linier" title="Link to this heading">#</a></h2>
-<p>Sistem persamaan linier adalah kumpulan dari satu atau lebih persamaan linier yang memiliki variabel yang sama. Bentuk umum dari sistem persamaan linier dengan n variabel adalah:</p>
-<p><span class="math notranslate nohighlight">\(a_1x_1 + a_2x_2 + \dots + a_nx_n = b\)</span></p>
-<p>Di mana:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(( a_1, a_2, ..., a_n )\)</span> adalah koefisien,</p></li>
-<li><p><span class="math notranslate nohighlight">\(( x_1, x_2, ..., x_n )\)</span> adalah variabel,</p></li>
-<li><p><span class="math notranslate nohighlight">\(( b )\)</span> adalah konstanta.</p></li>
-</ul>
-<p>Sistem persamaan linier dapat memiliki solusi unik, banyak solusi, atau tidak memiliki solusi tergantung pada sifat dari persamaan dalam sistem tersebut.</p>
-</section>
-<section id="solusi-persamaan-linier">
-<h2>Solusi Persamaan Linier<a class="headerlink" href="#solusi-persamaan-linier" title="Link to this heading">#</a></h2>
-<p>Solusi dari sistem persamaan linier dapat ditemukan dengan berbagai metode, di antaranya:</p>
-<section id="eliminasi">
-<h3>Eliminasi<a class="headerlink" href="#eliminasi" title="Link to this heading">#</a></h3>
-<p>Metode eliminasi adalah teknik penyelesaian sistem persamaan linier dengan menghilangkan variabel secara bertahap hingga memperoleh bentuk yang lebih sederhana. Langkah-langkah metode eliminasi adalah:</p>
-<ol class="arabic simple">
-<li><p>Pilih satu variabel untuk dieliminasi.</p></li>
-<li><p>Kalikan salah satu atau kedua persamaan sehingga koefisien variabel yang ingin dieliminasi menjadi sama.</p></li>
-<li><p>Kurangkan atau tambahkan persamaan untuk menghilangkan variabel tersebut.</p></li>
-<li><p>Ulangi langkah di atas hingga sistem menjadi lebih sederhana dan mudah diselesaikan.</p></li>
-</ol>
-<p><strong>Contoh:</strong></p>
-<p><span class="math notranslate nohighlight">\(\begin{cases}
-y = 2x + 3 \\
-x + y = 15
-\end{cases}\)</span></p>
-<p>Langkah-langkah:</p>
-<ol class="arabic simple">
-<li><p>Substitusi <span class="math notranslate nohighlight">\(( y = 2x + 3 )\)</span> ke persamaan kedua:
-<span class="math notranslate nohighlight">\(x + (2x + 3) = 15\)</span></p></li>
-<li><p>Sederhanakan:
-<span class="math notranslate nohighlight">\(x + 2x + 3 = 15\)</span>
-<span class="math notranslate nohighlight">\(3x + 3 = 15\)</span>
-<span class="math notranslate nohighlight">\(3x = 12\)</span>
-<span class="math notranslate nohighlight">\(x = 4\)</span></p></li>
-<li><p>Substitusi <span class="math notranslate nohighlight">\(( x = 4 \) ke \( y = 2x + 3 )\)</span>:
-<span class="math notranslate nohighlight">\(y = 2(4) + 3 = 8 + 3 = 11\)</span></p></li>
-</ol>
-<p><strong>Solusi: <span class="math notranslate nohighlight">\((4,11)\)</span></strong></p>
-</section>
-<section id="eliminasi-gauss">
-<h3>Eliminasi Gauss<a class="headerlink" href="#eliminasi-gauss" title="Link to this heading">#</a></h3>
-<p>Eliminasi Gauss adalah metode yang digunakan untuk menyederhanakan sistem persamaan linier ke dalam bentuk eselon baris. Langkah-langkahnya adalah:</p>
-<ol class="arabic simple">
-<li><p>Susun sistem persamaan dalam bentuk matriks augmented.</p></li>
-<li><p>Gunakan operasi baris elementer untuk mengubah matriks ke bentuk eselon baris.</p></li>
-<li><p>Dari bentuk eselon baris, gunakan substitusi balik untuk menemukan nilai variabel.</p></li>
-</ol>
-<p><strong>Contoh:</strong></p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
-1 &amp; -2 &amp; | -3 \\ 
-1 &amp; 1 &amp; | 15 
-\end{bmatrix}\)</span></p>
-<p>Langkah-langkah:</p>
-<ol class="arabic">
-<li><p>Eliminasi elemen pertama dari baris kedua dengan <span class="math notranslate nohighlight">\(R_2 \leftarrow R_2 - R_1\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
-1 &amp; -2 &amp; | -3 \\ 
-0 &amp; 3 &amp; | 18 
-\end{bmatrix}\)</span></p>
-</li>
-<li><p>Bagi baris kedua dengan 3 agar <span class="math notranslate nohighlight">\(y\)</span> menjadi 1:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
-1 &amp; -2 &amp; | -3 \\ 
-0 &amp; 1 &amp; | 6 
-\end{bmatrix}\)</span></p>
-</li>
-<li><p>Gunakan ( R_1 \leftarrow R_1 + 2R_2 ) untuk menghilangkan elemen kedua di baris pertama:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
-1 &amp; 0 &amp; | 4 \\ 
-0 &amp; 1 &amp; | 6 
-\end{bmatrix}\)</span></p>
-</li>
-</ol>
-<p>Sehingga diperoleh ** <span class="math notranslate nohighlight">\(x = 4\)</span> dan <span class="math notranslate nohighlight">\(y = 11\)</span> **.</p>
-</section>
-<section id="solusi-grafik">
-<h3>Solusi Grafik<a class="headerlink" href="#solusi-grafik" title="Link to this heading">#</a></h3>
-<p>Metode solusi grafik digunakan untuk sistem persamaan linier dengan dua variabel. Langkah-langkahnya adalah:</p>
-<ol class="arabic simple">
-<li><p>Gambarkan masing-masing persamaan sebagai garis pada bidang koordinat.</p></li>
-<li><p>Titik potong antara dua garis tersebut adalah solusi dari sistem.</p></li>
-<li><p>Jika garis berpotongan di satu titik, maka ada satu solusi unik.</p></li>
-<li><p>Jika garis sejajar, maka tidak ada solusi.</p></li>
-<li><p>Jika garis bertumpuk, maka ada banyak solusi.</p></li>
-</ol>
-<p><strong>Contoh:</strong>
-Untuk sistem persamaan:</p>
-<p><span class="math notranslate nohighlight">\(\begin{cases}
-y = 2x + 3\\
-y = -x + 15
-\end{cases}\)</span></p>
-<p>Gambarkan kedua garis pada bidang koordinat dan tentukan titik potongnya.</p>
-<iframe src="https://www.geogebra.org/calculator/nsjfzexc?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
-<p>Metode grafik memberikan representasi visual dari solusi sistem persamaan linier, namun kurang praktis untuk sistem dengan lebih dari dua variabel.</p>
-</section>
-</section>
-</section>
-
+  
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -540,15 +426,9 @@ y = -x + 15
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-sistem-persamaan-linier">Definisi Sistem Persamaan Linier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-persamaan-linier">Solusi Persamaan Linier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi">Eliminasi</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">Eliminasi Gauss</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-grafik">Solusi Grafik</a></li>
+    <ul class="simple visible nav section-nav flex-column">
 </ul>
-</li>
-</ul>
+
   </nav></div>
 
 </div></div>
