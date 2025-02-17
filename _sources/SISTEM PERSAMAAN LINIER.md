@@ -90,7 +90,7 @@ $\begin{bmatrix}
    \end{bmatrix}$
    
 
-Sehingga diperoleh ** $x = 4$ dan $y = 11$ **.
+Sehingga diperoleh **$x = 4$ dan $y = 11$**.
 
 ### Solusi Grafik
 Metode solusi grafik digunakan untuk sistem persamaan linier dengan dua variabel. Langkah-langkahnya adalah:
