@@ -82,7 +82,7 @@ $\begin{bmatrix}
    0 & 1 & | 6 
    \end{bmatrix}$
    
-3. Gunakan \( R_1 \leftarrow R_1 + 2R_2 \) untuk menghilangkan elemen kedua di baris pertama:
+3. Gunakan $R_1 \leftarrow R_1 + 2R_2$ untuk menghilangkan elemen kedua di baris pertama:
    
    $\begin{bmatrix} 
    1 & 0 & | 4 \\ 
