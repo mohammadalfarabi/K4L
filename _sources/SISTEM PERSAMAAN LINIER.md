@@ -36,13 +36,21 @@ x + y = 15
  
 Langkah-langkah:  
 1. Substitusi $y = 2x + 3$ ke persamaan kedua:
+
    $x + (2x + 3) = 15$
+
 2. Sederhanakan:
+
    $x + 2x + 3 = 15$
+
    $3x + 3 = 15$
+
    $3x = 12$
+
    $x = 4$
+
 3. Substitusi $x = 4$ ke $y = 2x + 3$:
+
    $y = 2(4) + 3 = 8 + 3 = 11$
 
 **Solusi: $(4,11)$**
