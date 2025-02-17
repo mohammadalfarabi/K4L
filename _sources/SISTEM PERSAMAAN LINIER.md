@@ -28,10 +28,12 @@ Metode eliminasi adalah teknik penyelesaian sistem persamaan linier dengan mengh
 4. Ulangi langkah di atas hingga sistem menjadi lebih sederhana dan mudah diselesaikan.
 
 **Contoh:**
+\[
 \begin{cases}
 2x + 3y = 8 \\
 4x - y = 2
-\end{cases} 
+\end{cases}
+\]
 Dengan metode eliminasi, kalikan persamaan kedua dengan 3 dan jumlahkan dengan persamaan pertama untuk menghilangkan y.
 
 ### Eliminasi Gauss
