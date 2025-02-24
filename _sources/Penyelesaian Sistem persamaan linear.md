@@ -92,9 +92,9 @@ Jika ingin solusi spesifik, kita bisa memilih nilai $( x_3 )$, misalnya:
 #### 2. Soal nomor 2
 
 $\begin{aligned}
-1. \quad x_1 + x_2 + x_3 &= 3 \\
-2. \quad 2x_1 + 2x_3 &= 5 \\
-3. \quad x_1 + 2x_2 &= 3
+\quad x_1 + x_2 + x_3 &= 3 \\
+\quad 2x_1 + 2x_3 &= 5 \\
+\quad x_1 + 2x_2 &= 3
 \end{aligned}$
 
 **Langkah 1: Representasi Matriks Augmented**
