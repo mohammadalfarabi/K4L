@@ -60,6 +60,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Matrik';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -170,6 +172,8 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20Sistem%20persamaan%20linear.html">Penyelesaian Sistem persamaan linear</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Matrik</a></li>
+
+
 </ul>
 
     </div>
@@ -362,12 +366,32 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Matrik</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-matrik">Pengertian Matrik</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-arit-matika-matrik">Operasi Arit Matika Matrik</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan">Penjumlahan</a></li>
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#maka-a-b-begin-bmatrix-1-5-2-6-3-7-4-8-end-bmatrix">Maka:
+<br/>
+A + B =
+\begin{bmatrix}
+1+5 &amp; 2+6 \
+3+7 &amp; 4+8
+\end{bmatrix}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matrik">Perkalian Matrik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skalar-dengan-matriks">Perkalian skalar dengan matriks</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#x-a-begin-bmatrix-3-times-1-3-times-2-3-times-3-3-times-4-end-bmatrix">3 x A =
+\begin{bmatrix}
+3 \times 1 &amp; 3 \times 2 \
+3 \times 3 &amp; 3 \times 4
+\end{bmatrix}</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -388,8 +412,267 @@
 <h2>Operasi Arit Matika Matrik<a class="headerlink" href="#operasi-arit-matika-matrik" title="Link to this heading">#</a></h2>
 <section id="penjumlahan">
 <h3>Penjumlahan<a class="headerlink" href="#penjumlahan" title="Link to this heading">#</a></h3>
+<p>Penjumlahan matriks adalah operasi yang dilakukan dengan menjumlahkan elemen-elemen yang bersesuaian dari dua matriks yang memiliki ukuran yang sama.</p>
+<p>Syarat Penjumlahan Matriks</p>
+<ol class="arabic simple">
+<li><p>Ukuran sama – Dua matriks yang akan dijumlahkan harus memiliki jumlah baris dan kolom yang sama.</p></li>
+<li><p>Elemen ditambahkan satu per satu – Setiap elemen di posisi yang sama pada kedua matriks dijumlahkan.</p></li>
+</ol>
+<p>Rumus Penjumlahan Matriks<br />
+Misalkan ada dua matriks:<br />
+<br />
+A =
+\begin{bmatrix}
+a_{11} &amp; a_{12} \
+a_{21} &amp; a_{22}
+\end{bmatrix}</p>
+<p><br />
+B =
+\begin{bmatrix}
+b_{11} &amp; b_{12} \
+b_{21} &amp; b_{22}
+\end{bmatrix}</p>
+<p>Maka hasil penjumlahan ( C = A + B ) adalah:<br />
+<br />
+C =
+\begin{bmatrix}
+a_{11} + b_{11} &amp; a_{12} + b_{12} \
+a_{21} + b_{21} &amp; a_{22} + b_{22}
+\end{bmatrix}</p>
+<p>Contoh Perhitungan
+Jika:
+<br />
+A =
+\begin{bmatrix}
+1 &amp; 2 \
+3 &amp; 4
+\end{bmatrix}
+<br />
+<br />
+B =
+\begin{bmatrix}
+5 &amp; 6 \
+7 &amp; 8
+\end{bmatrix}</p>
 </section>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="maka-a-b-begin-bmatrix-1-5-2-6-3-7-4-8-end-bmatrix">
+<h1>Maka:
+<br />
+A + B =
+\begin{bmatrix}
+1+5 &amp; 2+6 \
+3+7 &amp; 4+8
+\end{bmatrix}<a class="headerlink" href="#maka-a-b-begin-bmatrix-1-5-2-6-3-7-4-8-end-bmatrix" title="Link to this heading">#</a></h1>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+6 &amp; 8 \\
+10 &amp; 12
+\end{bmatrix}\)</span></p>
+<p>Jika ukuran matriks berbeda, maka penjumlahan tidak dapat dilakukan.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tambah_matriks</span><span class="p">(</span><span class="n">matriks1</span><span class="p">,</span> <span class="n">matriks2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">matriks1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">matriks2</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">matriks1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">matriks2</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Ukuran matriks harus sama&quot;</span><span class="p">)</span>
+
+    <span class="n">hasil</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matriks1</span><span class="p">)):</span>
+        <span class="n">baris</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matriks1</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+            <span class="n">baris</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">matriks1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">matriks2</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+        <span class="n">hasil</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">baris</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">hasil</span>
+
+<span class="n">matriks_a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+<span class="n">matriks_b</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+
+<span class="n">hasil</span> <span class="o">=</span> <span class="n">tambah_matriks</span><span class="p">(</span><span class="n">matriks_a</span><span class="p">,</span> <span class="n">matriks_b</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">baris</span> <span class="ow">in</span> <span class="n">hasil</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">baris</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 8]
+[10, 12]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="perkalian-matrik">
+<h2>Perkalian Matrik<a class="headerlink" href="#perkalian-matrik" title="Link to this heading">#</a></h2>
+<p>Perkalian matriks adalah operasi yang dilakukan dengan mengalikan elemen-elemen dari dua matriks berdasarkan aturan tertentu. Tidak seperti penjumlahan, perkalian matriks memiliki aturan khusus yang harus diikuti.</p>
+<p>Syarat Perkalian Matriks</p>
+<ol class="arabic simple">
+<li><p>Jumlah kolom matriks pertama harus sama dengan jumlah baris matriks kedua</p>
+<ul class="simple">
+<li><p>Jika matriks <strong>A</strong> berukuran <span class="math notranslate nohighlight">\(( m \times n )\)</span> dan matriks <strong>B</strong> berukuran <span class="math notranslate nohighlight">\(( n \times p )\)</span>, maka hasil perkalian <strong>C</strong> akan berukuran <span class="math notranslate nohighlight">\(( m \times p )\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Menggunakan operasi dot product (perkalian dan penjumlahan elemen)</p>
+<ul class="simple">
+<li><p>Elemen dalam hasil matriks diperoleh dengan menjumlahkan hasil kali elemen-elemen dari baris matriks pertama dengan elemen-elemen dari kolom matriks kedua.</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p>Rumus Perkalian Matriks
+Misalkan ada dua matriks:</p>
+<p>A =
+\begin{bmatrix}
+a_{11} &amp; a_{12} &amp; a_{13} \
+a_{21} &amp; a_{22} &amp; a_{23}
+\end{bmatrix}</p>
+<p>B =
+\begin{bmatrix}
+b_{11} &amp; b_{12} \
+b_{21} &amp; b_{22} \
+b_{31} &amp; b_{32}
+\end{bmatrix}</p>
+<p>Maka hasil perkalian C = A × B akan berukuran 2 × 2:</p>
+<p>C =
+\begin{bmatrix}
+(a_{11} \cdot b_{11} + a_{12} \cdot b_{21} + a_{13} \cdot b_{31}) &amp; (a_{11} \cdot b_{12} + a_{12} \cdot b_{22} + a_{13} \cdot b_{32}) \
+(a_{21} \cdot b_{11} + a_{22} \cdot b_{21} + a_{23} \cdot b_{31}) &amp; (a_{21} \cdot b_{12} + a_{22} \cdot b_{22} + a_{23} \cdot b_{32})
+\end{bmatrix}</p>
+<p>Contoh Perhitungan
+Misalkan:</p>
+<p>A =
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 \
+4 &amp; 5 &amp; 6
+\end{bmatrix}</p>
+<p>B =
+\begin{bmatrix}
+7 &amp; 8 \
+9 &amp; 10 \
+11 &amp; 12
+\end{bmatrix}</p>
+<p>Maka hasilnya:
+C =
+\begin{bmatrix}
+(1 \times 7 + 2 \times 9 + 3 \times 11) &amp; (1 \times 8 + 2 \times 10 + 3 \times 12) \
+(4 \times 7 + 5 \times 9 + 6 \times 11) &amp; (4 \times 8 + 5 \times 10 + 6 \times 12)
+\end{bmatrix}</p>
+<p><br />
+C =
+\begin{bmatrix}
+(7 + 18 + 33) &amp; (8 + 20 + 36) \
+(28 + 45 + 66) &amp; (32 + 50 + 72)
+\end{bmatrix}</p>
+<p><br />
+C =
+\begin{bmatrix}
+58 &amp; 64 \
+139 &amp; 154
+\end{bmatrix}</p>
+<p>Kesimpulan</p>
+<ul class="simple">
+<li><p>Perkalian matriks tidak bisa dilakukan sembarangan, harus memenuhi syarat ukuran.</p></li>
+<li><p>Hasil perkalian matriks bisa memiliki ukuran yang berbeda dari matriks aslinya.</p></li>
+<li><p>Perkalian matriks tidak komutatif (( A × B != B × A )).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">kali_matriks</span><span class="p">(</span><span class="n">matriks1</span><span class="p">,</span> <span class="n">matriks2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">matriks1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">matriks2</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Jumlah kolom matriks pertama harus sama dengan jumlah baris matriks kedua&quot;</span><span class="p">)</span>
+
+    <span class="n">hasil</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matriks2</span><span class="p">[</span><span class="mi">0</span><span class="p">]))]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matriks1</span><span class="p">))]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matriks1</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matriks2</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matriks2</span><span class="p">)):</span>
+                <span class="n">hasil</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">matriks1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">matriks2</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">hasil</span>
+
+<span class="n">matriks_a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
+<span class="n">matriks_b</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+
+<span class="n">hasil</span> <span class="o">=</span> <span class="n">kali_matriks</span><span class="p">(</span><span class="n">matriks_a</span><span class="p">,</span> <span class="n">matriks_b</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">baris</span> <span class="ow">in</span> <span class="n">hasil</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">baris</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[30, 24, 18]
+[84, 69, 54]
+[138, 114, 90]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="perkalian-skalar-dengan-matriks">
+<h2>Perkalian skalar dengan matriks<a class="headerlink" href="#perkalian-skalar-dengan-matriks" title="Link to this heading">#</a></h2>
+<p>Perkalian skalar dengan matriks adalah operasi di mana setiap elemen dalam matriks dikalikan dengan suatu bilangan skalar.</p>
+<hr class="docutils" />
+<p>Rumus Perkalian Skalar dengan Matriks<br />
+Jika terdapat matriks:</p>
+<p>A =
+\begin{bmatrix}
+a_{11} &amp; a_{12} \
+a_{21} &amp; a_{22}
+\end{bmatrix}</p>
+<p>dan skalar ( k ), maka hasil perkalian skalar ( k \times A ) adalah:</p>
+<p>k x A =
+\begin{bmatrix}
+k \times a_{11} &amp; k \times a_{12} \
+k \times a_{21} &amp; k \times a_{22}
+\end{bmatrix}</p>
+<p>Contoh Perhitungan
+Misalkan:</p>
+<p>A =
+\begin{bmatrix}
+1 &amp; 2 \
+3 &amp; 4
+\end{bmatrix}</p>
+<p>dan skalar ( k = 3 ), maka:</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="x-a-begin-bmatrix-3-times-1-3-times-2-3-times-3-3-times-4-end-bmatrix">
+<h1>3 x A =
+\begin{bmatrix}
+3 \times 1 &amp; 3 \times 2 \
+3 \times 3 &amp; 3 \times 4
+\end{bmatrix}<a class="headerlink" href="#x-a-begin-bmatrix-3-times-1-3-times-2-3-times-3-3-times-4-end-bmatrix" title="Link to this heading">#</a></h1>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+3 &amp; 6 \\
+9 &amp; 12
+\end{bmatrix}\)</span></p>
+<p>Kesimpulan</p>
+<ul class="simple">
+<li><p>Perkalian skalar hanya mengalikan setiap elemen dalam matriks dengan suatu bilangan.</p></li>
+<li><p>Ukuran matriks tetap sama setelah perkalian.</p></li>
+<li><p>Operasi ini bersifat distributif dan mudah dihitung.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">kali_skalar_matriks</span><span class="p">(</span><span class="n">skalar</span><span class="p">,</span> <span class="n">matriks</span><span class="p">):</span>
+    <span class="n">hasil</span> <span class="o">=</span> <span class="p">[[</span><span class="n">skalar</span> <span class="o">*</span> <span class="n">elemen</span> <span class="k">for</span> <span class="n">elemen</span> <span class="ow">in</span> <span class="n">baris</span><span class="p">]</span> <span class="k">for</span> <span class="n">baris</span> <span class="ow">in</span> <span class="n">matriks</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">hasil</span>
+
+<span class="n">skalar</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">matriks</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
+
+<span class="n">hasil</span> <span class="o">=</span> <span class="n">kali_skalar_matriks</span><span class="p">(</span><span class="n">skalar</span><span class="p">,</span> <span class="n">matriks</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">baris</span> <span class="ow">in</span> <span class="n">hasil</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">baris</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 4, 6]
+[8, 10, 12]
+[14, 16, 18]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -448,12 +731,32 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Matrik</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-matrik">Pengertian Matrik</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-arit-matika-matrik">Operasi Arit Matika Matrik</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan">Penjumlahan</a></li>
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#maka-a-b-begin-bmatrix-1-5-2-6-3-7-4-8-end-bmatrix">Maka:
+<br/>
+A + B =
+\begin{bmatrix}
+1+5 &amp; 2+6 \
+3+7 &amp; 4+8
+\end{bmatrix}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matrik">Perkalian Matrik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skalar-dengan-matriks">Perkalian skalar dengan matriks</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#x-a-begin-bmatrix-3-times-1-3-times-2-3-times-3-3-times-4-end-bmatrix">3 x A =
+\begin{bmatrix}
+3 \times 1 &amp; 3 \times 2 \
+3 \times 3 &amp; 3 \times 4
+\end{bmatrix}</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>
