@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SISTEM PERSAMAAN LINIER &#8212; Mas KAL</title>
+    <title>DETERMINAN MATRIKS &#8212; Mas KAL</title>
   
   
   
@@ -62,10 +62,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'SISTEM PERSAMAAN LINIER';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Determinan Matrik';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Penyelesaian Sistem persamaan linear" href="Penyelesaian%20Sistem%20persamaan%20linear.html" />
+    <link rel="prev" title="Matrik" href="Matrik.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -117,8 +117,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -138,7 +136,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="SISTEM%20PERSAMAAN%20LINIER.html">
   
   
   
@@ -165,16 +163,16 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="SISTEM%20PERSAMAAN%20LINIER.html">
                     SISTEM PERSAMAAN LINIER
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20Sistem%20persamaan%20linear.html">Penyelesaian Sistem persamaan linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Matrik.html">Matrik</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Determinan%20Matrik.html">DETERMINAN MATRIKS</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">DETERMINAN MATRIKS</a></li>
 </ul>
 
     </div>
@@ -251,7 +249,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FSISTEM PERSAMAAN LINIER.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FDeterminan Matrik.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -281,7 +279,7 @@
       
       
       
-      <li><a href="_sources/SISTEM PERSAMAAN LINIER.md" target="_blank"
+      <li><a href="_sources/Determinan Matrik.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -357,7 +355,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>SISTEM PERSAMAAN LINIER</h1>
+    <h1>DETERMINAN MATRIKS</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -367,11 +365,13 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-sistem-persamaan-linier">Definisi Sistem Persamaan Linier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-persamaan-linier">Solusi Persamaan Linier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi">Eliminasi</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">Eliminasi Gauss</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-grafik">Solusi Grafik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matriks">1. Minor Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cofaktor-matriks">2. Cofaktor Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor"><strong>3. Mencari Determinan dengan Konsep Minor dan Cofaktor</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-perhitungan-determinan">Contoh Perhitungan Determinan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-determinan-matriks-33">1. Contoh Determinan Matriks 3×3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-determinan-matriks-44"><strong>2. Contoh Determinan Matriks 4×4</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-determinan-matriks-55">3. Contoh Determinan Matriks 5×5</a></li>
 </ul>
 </li>
 </ul>
@@ -385,110 +385,206 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linier">
-<h1>SISTEM PERSAMAAN LINIER<a class="headerlink" href="#sistem-persamaan-linier" title="Link to this heading">#</a></h1>
-<section id="definisi-sistem-persamaan-linier">
-<h2>Definisi Sistem Persamaan Linier<a class="headerlink" href="#definisi-sistem-persamaan-linier" title="Link to this heading">#</a></h2>
-<p>Sistem persamaan linier adalah kumpulan dari satu atau lebih persamaan linier yang memiliki variabel yang sama. Bentuk umum dari sistem persamaan linier dengan n variabel adalah:</p>
-<p><span class="math notranslate nohighlight">\(a_1x_1 + a_2x_2 + \dots + a_nx_n = b\)</span></p>
-<p>Di mana:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(( a_1, a_2, ..., a_n )\)</span> adalah koefisien,</p></li>
-<li><p><span class="math notranslate nohighlight">\(( x_1, x_2, ..., x_n )\)</span> adalah variabel,</p></li>
-<li><p><span class="math notranslate nohighlight">\(( b )\)</span> adalah konstanta.</p></li>
-</ul>
-<p>Sistem persamaan linier dapat memiliki solusi unik, banyak solusi, atau tidak memiliki solusi tergantung pada sifat dari persamaan dalam sistem tersebut.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="determinan-matriks">
+<h1>DETERMINAN MATRIKS<a class="headerlink" href="#determinan-matriks" title="Link to this heading">#</a></h1>
+<p>Determinant atau determinan matriks adalah suatu bilangan skalar yang diperoleh dari operasi tertentu pada elemen-elemen suatu matriks persegi. Determinan memiliki peran penting dalam berbagai aplikasi matematika, termasuk mencari invers matriks dan menyelesaikan sistem persamaan linear.</p>
+<section id="minor-matriks">
+<h2>1. Minor Matriks<a class="headerlink" href="#minor-matriks" title="Link to this heading">#</a></h2>
+<p>Minor dari suatu elemen dalam matriks adalah determinan dari submatriks yang diperoleh dengan menghapus baris dan kolom yang mengandung elemen tersebut.</p>
 </section>
-<section id="solusi-persamaan-linier">
-<h2>Solusi Persamaan Linier<a class="headerlink" href="#solusi-persamaan-linier" title="Link to this heading">#</a></h2>
-<p>Solusi dari sistem persamaan linier dapat ditemukan dengan berbagai metode, di antaranya:</p>
-<section id="eliminasi">
-<h3>Eliminasi<a class="headerlink" href="#eliminasi" title="Link to this heading">#</a></h3>
-<p>Metode eliminasi adalah teknik penyelesaian sistem persamaan linier dengan menghilangkan variabel secara bertahap hingga memperoleh bentuk yang lebih sederhana. Langkah-langkah metode eliminasi adalah:</p>
-<ol class="arabic simple">
-<li><p>Pilih satu variabel untuk dieliminasi.</p></li>
-<li><p>Kalikan salah satu atau kedua persamaan sehingga koefisien variabel yang ingin dieliminasi menjadi sama.</p></li>
-<li><p>Kurangkan atau tambahkan persamaan untuk menghilangkan variabel tersebut.</p></li>
-<li><p>Ulangi langkah di atas hingga sistem menjadi lebih sederhana dan mudah diselesaikan.</p></li>
-</ol>
-<p><strong>Contoh:</strong></p>
-<p><span class="math notranslate nohighlight">\(\begin{cases}
-y = 2x + 3 \\
-x + y = 15
-\end{cases}\)</span></p>
-<p>Langkah-langkah:</p>
-<ol class="arabic">
-<li><p>Substitusi <span class="math notranslate nohighlight">\(y = 2x + 3\)</span> ke persamaan kedua:</p>
-<p><span class="math notranslate nohighlight">\(x + (2x + 3) = 15\)</span></p>
-</li>
-<li><p>Sederhanakan:</p>
-<p><span class="math notranslate nohighlight">\(x + 2x + 3 = 15\)</span></p>
-<p><span class="math notranslate nohighlight">\(3x + 3 = 15\)</span></p>
-<p><span class="math notranslate nohighlight">\(3x = 12\)</span></p>
-<p><span class="math notranslate nohighlight">\(x = 4\)</span></p>
-</li>
-<li><p>Substitusi <span class="math notranslate nohighlight">\(x = 4\)</span> ke <span class="math notranslate nohighlight">\(y = 2x + 3\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(y = 2(4) + 3 = 8 + 3 = 11\)</span></p>
-</li>
-</ol>
-<p><strong>Solusi: <span class="math notranslate nohighlight">\((4,11)\)</span></strong></p>
+<section id="cofaktor-matriks">
+<h2>2. Cofaktor Matriks<a class="headerlink" href="#cofaktor-matriks" title="Link to this heading">#</a></h2>
+<p>Cofaktor dari suatu elemen dalam matriks adalah minor dari elemen tersebut dikalikan dengan faktor tanda (-1)ⁱ⁺ʲ, di mana <span class="math notranslate nohighlight">\(( i )\)</span> adalah indeks baris dan <span class="math notranslate nohighlight">\(( j )\)</span> adalah indeks kolom.</p>
 </section>
-<section id="eliminasi-gauss">
-<h3>Eliminasi Gauss<a class="headerlink" href="#eliminasi-gauss" title="Link to this heading">#</a></h3>
-<p>Eliminasi Gauss adalah metode yang digunakan untuk menyederhanakan sistem persamaan linier ke dalam bentuk eselon baris. Langkah-langkahnya adalah:</p>
-<ol class="arabic simple">
-<li><p>Susun sistem persamaan dalam bentuk matriks augmented.</p></li>
-<li><p>Gunakan operasi baris elementer untuk mengubah matriks ke bentuk eselon baris.</p></li>
-<li><p>Dari bentuk eselon baris, gunakan substitusi balik untuk menemukan nilai variabel.</p></li>
-</ol>
-<p><strong>Contoh:</strong></p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
-1 &amp; -2 &amp; | -3 \\ 
-1 &amp; 1 &amp; | 15 
+<section id="mencari-determinan-dengan-konsep-minor-dan-cofaktor">
+<h2><strong>3. Mencari Determinan dengan Konsep Minor dan Cofaktor</strong><a class="headerlink" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor" title="Link to this heading">#</a></h2>
+<p>Determinannya dihitung dengan ekspansi kofaktor menggunakan rumus:<br />
+<span class="math notranslate nohighlight">\(\det(A) = \sum_{j=1}^{n} a_{ij} C_{ij}\)</span>
+di mana <span class="math notranslate nohighlight">\(( a_{ij} )\)</span> adalah elemen pada baris pertama dan <span class="math notranslate nohighlight">\(( C_{ij} )\)</span> adalah kofaktor dari elemen tersebut.</p>
+<section id="contoh-perhitungan-determinan">
+<h3>Contoh Perhitungan Determinan<a class="headerlink" href="#contoh-perhitungan-determinan" title="Link to this heading">#</a></h3>
+</section>
+<section id="contoh-determinan-matriks-33">
+<h3>1. Contoh Determinan Matriks 3×3<a class="headerlink" href="#contoh-determinan-matriks-33" title="Link to this heading">#</a></h3>
+<p>Misalkan diberikan matriks:<br />
+<span class="math notranslate nohighlight">\(A =
+\begin{bmatrix}
+2 &amp; 3 &amp; 1 \\
+4 &amp; 5 &amp; 6 \\
+7 &amp; 8 &amp; 9
+\end{bmatrix}\)</span>
+Kita gunakan ekspansi kofaktor pada baris pertama:<br />
+<span class="math notranslate nohighlight">\(\det(A) = 2
+\begin{vmatrix}
+5 &amp; 6 \\
+8 &amp; 9
+\end{vmatrix} - 3
+\begin{vmatrix}
+4 &amp; 6 \\
+7 &amp; 9
+\end{vmatrix} + 1
+\begin{vmatrix}
+4 &amp; 5 \\
+7 &amp; 8
+\end{vmatrix}\)</span></p>
+<p>Hitung determinan dari masing-masing submatriks 2×2:<br />
+<span class="math notranslate nohighlight">\(\begin{vmatrix}
+5 &amp; 6 \\
+8 &amp; 9
+\end{vmatrix} = (5 \times 9) - (6 \times 8) = 45 - 48 = -3\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{vmatrix}
+4 &amp; 6 \\
+7 &amp; 9
+\end{vmatrix} = (4 \times 9) - (6 \times 7) = 36 - 42 = -6\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{vmatrix}
+4 &amp; 5 \\
+7 &amp; 8
+\end{vmatrix} = (4 \times 8) - (5 \times 7) = 32 - 35 = -3\)</span></p>
+<p>Substitusi hasilnya:<br />
+<span class="math notranslate nohighlight">\(\det(A) = (2 \times -3) - (3 \times -6) + (1 \times -3)\)</span>
+<span class="math notranslate nohighlight">\(= -6 + 18 - 3 = 9\)</span></p>
+</section>
+<section id="contoh-determinan-matriks-44">
+<h3><strong>2. Contoh Determinan Matriks 4×4</strong><a class="headerlink" href="#contoh-determinan-matriks-44" title="Link to this heading">#</a></h3>
+<p>Misalkan diberikan matriks:<br />
+<span class="math notranslate nohighlight">\(B =
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+5 &amp; 6 &amp; 7 &amp; 8 \\
+9 &amp; 10 &amp; 11 &amp; 12 \\
+13 &amp; 14 &amp; 15 &amp; 16
+\end{bmatrix}\)</span>
+Gunakan ekspansi kofaktor pada baris pertama:<br />
+<span class="math notranslate nohighlight">\(\det(B) = 1
+\begin{vmatrix}
+6 &amp; 7 &amp; 8 \\
+10 &amp; 11 &amp; 12 \\
+14 &amp; 15 &amp; 16
+\end{vmatrix} - 2
+\begin{vmatrix}
+5 &amp; 7 &amp; 8 \\
+9 &amp; 11 &amp; 12 \\
+13 &amp; 15 &amp; 16
+\end{vmatrix} + 3
+\begin{vmatrix}
+5 &amp; 6 &amp; 8 \\
+9 &amp; 10 &amp; 12 \\
+13 &amp; 14 &amp; 16
+\end{vmatrix} - 4
+\begin{vmatrix}
+5 &amp; 6 &amp; 7 \\
+9 &amp; 10 &amp; 11 \\
+13 &amp; 14 &amp; 15
+\end{vmatrix}\)</span></p>
+<p>Setiap submatriks 3×3 dihitung dengan metode sebelumnya:<br />
+<span class="math notranslate nohighlight">\(\begin{vmatrix}
+6 &amp; 7 &amp; 8 \\
+10 &amp; 11 &amp; 12 \\
+14 &amp; 15 &amp; 16
+\end{vmatrix} = (6(11 \times 16 - 12 \times 15)) - (7(10 \times 16 - 12 \times 14)) + (8(10 \times 15 - 11 \times 14))\)</span></p>
+<p><span class="math notranslate nohighlight">\(= (6(176 - 180)) - (7(160 - 168)) + (8(150 - 154))\)</span>
+<span class="math notranslate nohighlight">\(= (6 \times -4) - (7 \times -8) + (8 \times -4)\)</span>
+<span class="math notranslate nohighlight">\(= -24 + 56 - 32 = 0\)</span></p>
+<p>Karena semua submatriks 3×3 dari ekspansi kofaktor juga bernilai 0, maka:
+<span class="math notranslate nohighlight">\(\det(B) = 0\)</span></p>
+</section>
+<section id="contoh-determinan-matriks-55">
+<h3>3. Contoh Determinan Matriks 5×5<a class="headerlink" href="#contoh-determinan-matriks-55" title="Link to this heading">#</a></h3>
+<p>Misalkan diberikan matriks:
+<span class="math notranslate nohighlight">\(C =
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 \\
+11 &amp; 12 &amp; 13 &amp; 14 &amp; 15 \\
+16 &amp; 17 &amp; 18 &amp; 19 &amp; 20 \\
+21 &amp; 22 &amp; 23 &amp; 24 &amp; 25
 \end{bmatrix}\)</span></p>
-<ol class="arabic">
-<li><p>Eliminasi elemen pertama dari baris kedua dengan <span class="math notranslate nohighlight">\(R_2 \leftarrow R_2 - R_1\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
-1 &amp; -2 &amp; | -3 \\ 
-0 &amp; 3 &amp; | 18 
-\end{bmatrix}\)</span></p>
-</li>
-<li><p>Bagi baris kedua dengan 3 agar <span class="math notranslate nohighlight">\(y\)</span> menjadi 1:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
-1 &amp; -2 &amp; | -3 \\ 
-0 &amp; 1 &amp; | 6 
-\end{bmatrix}\)</span></p>
-</li>
-<li><p>Gunakan <span class="math notranslate nohighlight">\(R_1 \leftarrow R_1 + 2R_2\)</span> untuk menghilangkan elemen kedua di baris pertama:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix} 
-1 &amp; 0 &amp; | 4 \\ 
-0 &amp; 1 &amp; | 6 
-\end{bmatrix}\)</span></p>
-</li>
-</ol>
-<p>Sehingga diperoleh <strong><span class="math notranslate nohighlight">\(x = 4\)</span> dan <span class="math notranslate nohighlight">\(y = 11\)</span></strong>.</p>
+<p>Gunakan ekspansi kofaktor pada baris pertama:</p>
+<p><span class="math notranslate nohighlight">\(\det(C) =
+1 \times C_{11} - 2 \times C_{12} + 3 \times C_{13} - 4 \times C_{14} + 5 \times C_{15}\)</span></p>
+<p>di mana <span class="math notranslate nohighlight">\(( C_{ij} )\)</span> adalah determinan dari submatriks 4×4 yang diperoleh dengan menghapus baris ke-1 dan kolom ke- <span class="math notranslate nohighlight">\(( j )\)</span>.
+Hitung Submatriks 4×4
+Misalkan kita hitung submatriks pertama <span class="math notranslate nohighlight">\(( C_{11} )\)</span> dengan menghapus baris pertama dan kolom pertama:</p>
+<p><span class="math notranslate nohighlight">\(C_{11} =
+\begin{vmatrix}
+7 &amp; 8 &amp; 9 &amp; 10 \\
+12 &amp; 13 &amp; 14 &amp; 15 \\
+17 &amp; 18 &amp; 19 &amp; 20 \\
+22 &amp; 23 &amp; 24 &amp; 25
+\end{vmatrix}\)</span></p>
+<p>Gunakan ekspansi kofaktor pada baris pertama dari <span class="math notranslate nohighlight">\(( C_{11} )\)</span>:
+<span class="math notranslate nohighlight">\(\begin{vmatrix}
+7 &amp; 8 &amp; 9 &amp; 10 \\
+12 &amp; 13 &amp; 14 &amp; 15 \\
+17 &amp; 18 &amp; 19 &amp; 20 \\
+22 &amp; 23 &amp; 24 &amp; 25
+\end{vmatrix} = 7
+\begin{vmatrix}
+13 &amp; 14 &amp; 15 \\
+18 &amp; 19 &amp; 20 \\
+23 &amp; 24 &amp; 25
+\end{vmatrix} - 8
+\begin{vmatrix}
+12 &amp; 14 &amp; 15 \\
+17 &amp; 19 &amp; 20 \\
+22 &amp; 24 &amp; 25
+\end{vmatrix} + 9
+\begin{vmatrix}
+12 &amp; 13 &amp; 15 \\
+17 &amp; 18 &amp; 20 \\
+22 &amp; 23 &amp; 25
+\end{vmatrix} - 10
+\begin{vmatrix}
+12 &amp; 13 &amp; 14 \\
+17 &amp; 18 &amp; 19 \\
+22 &amp; 23 &amp; 24
+\end{vmatrix}\)</span></p>
+<p>Hitung Submatriks 3×3
+Misalkan kita hitung determinan submatriks 3×3 pertama:</p>
+<p><span class="math notranslate nohighlight">\(\begin{vmatrix}
+13 &amp; 14 &amp; 15 \\
+18 &amp; 19 &amp; 20 \\
+23 &amp; 24 &amp; 25
+\end{vmatrix}\)</span></p>
+<p>Gunakan ekspansi kofaktor pada baris pertama:</p>
+<p><span class="math notranslate nohighlight">\(= 13
+\begin{vmatrix}
+19 &amp; 20 \\
+24 &amp; 25
+\end{vmatrix} - 14
+\begin{vmatrix}
+18 &amp; 20 \\
+23 &amp; 25
+\end{vmatrix} + 15
+\begin{vmatrix}
+18 &amp; 19 \\
+23 &amp; 24
+\end{vmatrix}\)</span></p>
+<p>Hitung determinan matriks 2×2:</p>
+<p><span class="math notranslate nohighlight">\(\begin{vmatrix}
+19 &amp; 20 \\
+24 &amp; 25
+\end{vmatrix}
+= (19 \times 25) - (20 \times 24) = 475 - 480 = -5\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{vmatrix}
+18 &amp; 20 \\
+23 &amp; 25
+\end{vmatrix}
+= (18 \times 25) - (20 \times 23) = 450 - 460 = -10\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{vmatrix}
+18 &amp; 19 \\
+23 &amp; 24
+\end{vmatrix}
+= (18 \times 24) - (19 \times 23) = 432 - 437 = -5\)</span></p>
+<p>Substitusi:</p>
+<p><span class="math notranslate nohighlight">\(= 13(-5) - 14(-10) + 15(-5)\)</span></p>
+<p><span class="math notranslate nohighlight">\(= -65 + 140 - 75 = 0\)</span></p>
+<p>Karena semua submatriks 3×3 lainnya memiliki pola angka yang sama, maka determinan semua submatriks 3×3 adalah 0.</p>
+<p>Karena setiap submatriks 4×4 memiliki determinan 0, maka:
+<span class="math notranslate nohighlight">\(\det(C) = 1(0) - 2(0) + 3(0) - 4(0) + 5(0) = 0\)</span></p>
+<p>Jadi, determinan matriks 5×5 ini adalah 0</p>
 </section>
-<section id="solusi-grafik">
-<h3>Solusi Grafik<a class="headerlink" href="#solusi-grafik" title="Link to this heading">#</a></h3>
-<p>Metode solusi grafik digunakan untuk sistem persamaan linier dengan dua variabel. Langkah-langkahnya adalah:</p>
-<ol class="arabic simple">
-<li><p>Gambarkan masing-masing persamaan sebagai garis pada bidang koordinat.</p></li>
-<li><p>Titik potong antara dua garis tersebut adalah solusi dari sistem.</p></li>
-<li><p>Jika garis berpotongan di satu titik, maka ada satu solusi unik.</p></li>
-<li><p>Jika garis sejajar, maka tidak ada solusi.</p></li>
-<li><p>Jika garis bertumpuk, maka ada banyak solusi.</p></li>
-</ol>
-<p><strong>Contoh:</strong>
-Untuk sistem persamaan:</p>
-<p><span class="math notranslate nohighlight">\(\begin{cases}
-y = 2x + 3\\
-y = -x + 15
-\end{cases}\)</span></p>
-<iframe src="https://www.geogebra.org/calculator/nsjfzexc?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
 </section>
-</section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -521,14 +617,14 @@ y = -x + 15
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="Penyelesaian%20Sistem%20persamaan%20linear.html"
-       title="next page">
+    <a class="left-prev"
+       href="Matrik.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Penyelesaian Sistem persamaan linear</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Matrik</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -547,11 +643,13 @@ y = -x + 15
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-sistem-persamaan-linier">Definisi Sistem Persamaan Linier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-persamaan-linier">Solusi Persamaan Linier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi">Eliminasi</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">Eliminasi Gauss</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-grafik">Solusi Grafik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matriks">1. Minor Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cofaktor-matriks">2. Cofaktor Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor"><strong>3. Mencari Determinan dengan Konsep Minor dan Cofaktor</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-perhitungan-determinan">Contoh Perhitungan Determinan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-determinan-matriks-33">1. Contoh Determinan Matriks 3×3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-determinan-matriks-44"><strong>2. Contoh Determinan Matriks 4×4</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-determinan-matriks-55">3. Contoh Determinan Matriks 5×5</a></li>
 </ul>
 </li>
 </ul>
