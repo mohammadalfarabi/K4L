@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Penyelesaian Sistem persamaan linear &#8212; Mas KAL</title>
+    <title>Pembuktian Transformasi Rotasi Bidang &#8212; Mas KAL</title>
   
   
   
@@ -62,10 +62,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Penyelesaian Sistem persamaan linear';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pembuktian_transformasiL';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="intro.html" />
+    <link rel="prev" title="Matrik" href="Matrik.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -170,13 +170,9 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Penyelesaian Sistem persamaan linear</a></li>
-</ul>
-</ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="Matrik.html">Matriks</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="pembuktian_transformasiL.html">Pembuktian Transformasi Rotasi Bidang</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20Sistem%20persamaan%20linear.html">Penyelesaian Sistem persamaan linear</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Matrik.html">Matrik</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Pembuktian Transformasi Rotasi Bidang</a></li>
 </ul>
 
     </div>
@@ -253,7 +249,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPenyelesaian Sistem persamaan linear.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpembuktian_transformasiL.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -283,7 +279,7 @@
       
       
       
-      <li><a href="_sources/Penyelesaian Sistem persamaan linear.md" target="_blank"
+      <li><a href="_sources/pembuktian_transformasiL.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -359,7 +355,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Penyelesaian Sistem persamaan linear</h1>
+    <h1>Pembuktian Transformasi Rotasi Bidang</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -369,16 +365,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">Operasi Baris Elementer</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemenasi-gauss">Elemenasi Gauss</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-1">1. Soal nomor 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-2">2. Soal nomor 2</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-3">3. Soal nomor 3</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-4">4. Soal nomor 4</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-pembuktian">Langkah-langkah Pembuktian</a></li>
 </ul>
             </nav>
         </div>
@@ -390,200 +377,74 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="penyelesaian-sistem-persamaan-linear">
-<h1>Penyelesaian Sistem persamaan linear<a class="headerlink" href="#penyelesaian-sistem-persamaan-linear" title="Link to this heading">#</a></h1>
-<section id="operasi-baris-elementer">
-<h2>Operasi Baris Elementer<a class="headerlink" href="#operasi-baris-elementer" title="Link to this heading">#</a></h2>
-<section id="elemenasi-gauss">
-<h3>Elemenasi Gauss<a class="headerlink" href="#elemenasi-gauss" title="Link to this heading">#</a></h3>
-<section id="soal-nomor-1">
-<h4>1. Soal nomor 1<a class="headerlink" href="#soal-nomor-1" title="Link to this heading">#</a></h4>
-<p><span class="math notranslate nohighlight">\(\begin{aligned}
-\quad x_1 + 2x_2 + 3x_3 &amp;= 6 \\
-\quad 2x_1 + 4x_2 + 6x_3 &amp;= 12 \\
-\quad x_2 + x_3 &amp;= 2
-\end{aligned}\)</span></p>
-<p><strong>Langkah 1: Representasi Matriks Augmented</strong>
-Kita ubah sistem persamaan ini menjadi bentuk matriks augmented:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; | 6 \\
-2 &amp; 4 &amp; 6 &amp; | 12 \\
-0 &amp; 1 &amp; 1 &amp; | 2
-\end{bmatrix}\)</span></p>
-<p><strong>Langkah 2: Eliminasi Baris</strong>
-<strong>Eliminasi Elemen di Kolom Pertama</strong></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="pembuktian-transformasi-rotasi-bidang">
+<h1>Pembuktian Transformasi Rotasi Bidang<a class="headerlink" href="#pembuktian-transformasi-rotasi-bidang" title="Link to this heading">#</a></h1>
+<p>Kita ingin membuktikan bahwa transformasi linier <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> yang merepresentasikan rotasi berlawanan arah jarum jam sebesar sudut <span class="math notranslate nohighlight">\(\theta\)</span>, bisa dinyatakan dengan matriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = 
+\begin{bmatrix}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{bmatrix}
+\end{split}\]</div>
+<section id="langkah-langkah-pembuktian">
+<h2>Langkah-langkah Pembuktian<a class="headerlink" href="#langkah-langkah-pembuktian" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Misalkan kita punya vektor <span class="math notranslate nohighlight">\(\mathbf{v} = (x, y)\)</span>. Kita bisa ubah ke bentuk koordinat polar:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{v} = (x, y) = (r \cos \alpha, r \sin \alpha)
+\]</div>
+<p>Di mana:</p>
 <ul class="simple">
-<li><p>Kita ingin membuat elemen di bawah elemen utama (pivot) pertama menjadi nol.</p></li>
-<li><p>Baris kedua dikurangi 2 kali baris pertama:</p></li>
+<li><p><span class="math notranslate nohighlight">\(r\)</span> adalah panjang dari vektor <span class="math notranslate nohighlight">\(\mathbf{v}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> adalah sudut antara vektor <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> dan sumbu-x positif</p></li>
 </ul>
-<p><span class="math notranslate nohighlight">\(4R_2 = R_2 - 2R_1\)</span></p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; | 6 \\
-0 &amp; 0 &amp; 0 &amp; | 0 \\
-0 &amp; 1 &amp; 1 &amp; | 2
-\end{bmatrix}\)</span></p>
-<p>Karena baris kedua menjadi nol sepenuhnya, ini menunjukkan bahwa <strong>baris tersebut tidak memberikan informasi tambahan</strong>, sehingga kita bisa mengabaikannya.</p>
-<p><strong>Langkah 3: Ubah ke Bentuk Eselon Baris</strong>
-Matriks yang tersisa:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; | 6 \\
-0 &amp; 1 &amp; 1 &amp; | 2
-\end{bmatrix}\)</span></p>
-<p>Kita sudah memiliki bentuk eselon baris.</p>
-<p><strong>Langkah 4: Substitusi Balik</strong>
-Dari baris kedua:</p>
-<p><span class="math notranslate nohighlight">\(x_2 + x_3 = 2\)</span></p>
-<p><span class="math notranslate nohighlight">\(x_2 = 2 - x_3\)</span></p>
-<p>Dari baris pertama:</p>
-<p><span class="math notranslate nohighlight">\(x_1 + 2x_2 + 3x_3 = 6\)</span></p>
-<p>Substitusi <span class="math notranslate nohighlight">\(( x_2 = 2 - x_3 )\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(x_1 + 2(2 - x_3) + 3x_3 = 6\)</span></p>
-<p><span class="math notranslate nohighlight">\(x_1 + 4 - 2x_3 + 3x_3 = 6\)</span></p>
-<p><span class="math notranslate nohighlight">\(x_1 + 4 + x_3 = 6\)</span></p>
-<p><span class="math notranslate nohighlight">\(x_1 = 2 - x_3\)</span></p>
-<p><strong>Hasil Akhir</strong>
-Solusi dalam bentuk parametrik:</p>
-<p><span class="math notranslate nohighlight">\(\begin{aligned}
-x_1 &amp;= 2 - x_3 \\
-x_2 &amp;= 2 - x_3 \\
-x_3 &amp;= x_3
-\end{aligned}\)</span></p>
-<p>Karena ada satu variabel bebas <span class="math notranslate nohighlight">\(( x_3 )\)</span>, maka sistem ini memiliki <strong>tak hingga banyak solusi</strong>.</p>
-<p>Jika ingin solusi spesifik, kita bisa memilih nilai <span class="math notranslate nohighlight">\(( x_3 )\)</span>, misalnya:</p>
-<ul class="simple">
-<li><p>Jika <span class="math notranslate nohighlight">\(( x_3 = 0 )\)</span> → <span class="math notranslate nohighlight">\(( (x_1, x_2, x_3) = (2,2,0) )\)</span>.</p></li>
-<li><p>Jika <span class="math notranslate nohighlight">\(( x_3 = 1 )\)</span> → <span class="math notranslate nohighlight">\(( (x_1, x_2, x_3) = (1,1,1) )\)</span>.</p></li>
-<li><p>Jika <span class="math notranslate nohighlight">\(( x_3 = 2 )\)</span> → <span class="math notranslate nohighlight">\(( (x_1, x_2, x_3) = (0,0,2) )\)</span>.</p></li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="soal-nomor-2">
-<h4>2. Soal nomor 2<a class="headerlink" href="#soal-nomor-2" title="Link to this heading">#</a></h4>
-<p><span class="math notranslate nohighlight">\(\begin{aligned}
-\quad x_1 + x_2 + x_3 &amp;= 3 \\
-\quad 2x_1 + 2x_3 &amp;= 5 \\
-\quad x_1 + 2x_2 &amp;= 3
-\end{aligned}\)</span></p>
-<p><strong>Langkah 1: Representasi Matriks Augmented</strong>
-Kita ubah sistem persamaan ke dalam bentuk matriks augmented:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | 3 \\
-2 &amp; 0 &amp; 2 &amp; | 5 \\
-1 &amp; 2 &amp; 0 &amp; | 3
-\end{bmatrix}\)</span></p>
-<p><strong>Langkah 2: Eliminasi Elemen di Bawah Pivot Pertama</strong>
-Kita buat elemen di bawah elemen utama (pivot) pertama menjadi nol dengan operasi baris:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(( R_2 = R_2 - 2R_1 )\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(( R_3 = R_3 - R_1 )\)</span></p></li>
-</ul>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | 3 \\
-0 &amp; -2 &amp; 0 &amp; | -1 \\
-0 &amp; 1 &amp; -1 &amp; | 0
-\end{bmatrix}\)</span></p>
-<p><strong>Langkah 3: Eliminasi Elemen di Bawah Pivot Kedua</strong>
-Sekarang kita eliminasi elemen di bawah pivot kedua (<span class="math notranslate nohighlight">\(( -2 )\)</span>) untuk mendapatkan bentuk eselon:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(( R_3 = R_3 + \frac{1}{2} R_2 )\)</span></p></li>
-</ul>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-1 &amp; 1 &amp; 1 &amp; | 3 \\
-0 &amp; -2 &amp; 0 &amp; | -1 \\
-0 &amp; 0 &amp; -1 &amp; | -\frac{1}{2}
-\end{bmatrix}\)</span></p>
-<p><strong>Langkah 4: Substitusi Balik</strong>
-Dari baris ketiga:</p>
-<p><span class="math notranslate nohighlight">\(- x_3 = -\frac{1}{2}\)</span></p>
-<p><span class="math notranslate nohighlight">\(x_3 = \frac{1}{2}\)</span></p>
-<p>Dari baris kedua:</p>
-<p><span class="math notranslate nohighlight">\(-2x_2 = -1\)</span></p>
-<p><span class="math notranslate nohighlight">\(x_2 = \frac{1}{2}\)</span></p>
-<p>Dari baris pertama:</p>
-<p><span class="math notranslate nohighlight">\(x_1 + x_2 + x_3 = 3\)</span></p>
-<p><span class="math notranslate nohighlight">\(x_1 + \frac{1}{2} + \frac{1}{2} = 3\)</span></p>
-<p><span class="math notranslate nohighlight">\(x_1 + 1 = 3\)</span></p>
-<p><span class="math notranslate nohighlight">\(x_1 = 2\)</span></p>
-<p><strong>Hasil Akhir</strong>
-Solusi unik dari sistem ini adalah:</p>
-<p><span class="math notranslate nohighlight">\((x_1, x_2, x_3) = (2, \frac{1}{2}, \frac{1}{2})\)</span></p>
-<p>Jadi, sistem ini memiliki <strong>solusi tunggal</strong> yaitu <strong><span class="math notranslate nohighlight">\(( x_1 = 2 \), \( x_2 = \frac{1}{2} \), \( x_3 = \frac{1}{2} )\)</span></strong>.</p>
-</section>
-<hr class="docutils" />
-<section id="soal-nomor-3">
-<h4>3. Soal nomor 3<a class="headerlink" href="#soal-nomor-3" title="Link to this heading">#</a></h4>
-<p><span class="math notranslate nohighlight">\(2x_1 + 2x_2 = 4\)</span>
-<span class="math notranslate nohighlight">\(x_1 + x_1 = 2\)</span></p>
-<p><strong>Langkah 1: Representasi Matriks Augmented</strong>
-Kita ubah sistem persamaan ini menjadi bentuk matriks augmented:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-2 &amp; 2 &amp; | 4 \\
-1 &amp; 1 &amp; | 2
-\end{bmatrix}\)</span></p>
-<p><strong>Langkah 2: Normalisasi Pivot (Bentuk Eselon Baris)</strong>
-Kita buat elemen pivot pertama menjadi 1 dengan membagi baris pertama dengan 2:</p>
-<p><span class="math notranslate nohighlight">\(R_1 = \frac{1}{2} R_1\)</span></p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-1 &amp; 1 &amp; | 2 \\
-1 &amp; 1 &amp; | 2
-\end{bmatrix}\)</span></p>
-<p>Selanjutnya, kita eliminasi elemen di bawah pivot dengan <span class="math notranslate nohighlight">\(( R_2 = R_2 - R_1 )\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-1 &amp; 1 &amp; | 2 \\
-0 &amp; 0 &amp; | 0
-\end{bmatrix}\)</span></p>
-<p><strong>Langkah 3: Substitusi Balik</strong>
-Dari baris pertama:</p>
-<p><span class="math notranslate nohighlight">\(x_1 + x_2 = 2\)</span></p>
-<p>Dari baris kedua, kita lihat bahwa <span class="math notranslate nohighlight">\(( 0 = 0 )\)</span>, yang selalu benar, sehingga baris ini tidak memberikan informasi tambahan.</p>
-<p>Maka, sistem memiliki <strong>tak hingga banyak solusi</strong>, tergantung pada nilai variabel bebas <span class="math notranslate nohighlight">\(( x_2 )\)</span>:</p>
-<p><span class="math notranslate nohighlight">\(\begin{aligned}
-x_1 &amp;= 2 - x_2 \\
-x_2 &amp;= x_2
-\end{aligned}\)</span></p>
-<p><strong>Hasil Akhir</strong>
-Solusi dalam bentuk parametrik:</p>
-<p><span class="math notranslate nohighlight">\((x_1, x_2) = (2 - x_2, x_2)\)</span></p>
-<p>Misalnya:</p>
-<ul class="simple">
-<li><p>Jika <span class="math notranslate nohighlight">\(( x_2 = 0 )\)</span>, maka <span class="math notranslate nohighlight">\(( (x_1, x_2) = (2, 0) )\)</span>.</p></li>
-<li><p>Jika <span class="math notranslate nohighlight">\(( x_2 = 1 )\)</span>, maka <span class="math notranslate nohighlight">\(( (x_1, x_2) = (1, 1) )\)</span>.</p></li>
-<li><p>Jika <span class="math notranslate nohighlight">\(( x_2 = 2 )\)</span>, maka <span class="math notranslate nohighlight">\(( (x_1, x_2) = (0, 2) )\)</span>.</p></li>
-</ul>
-<p>Sistem ini memiliki <strong>tak hingga banyak solusi</strong> karena kedua persamaan sebenarnya identik.</p>
-</section>
-<hr class="docutils" />
-<section id="soal-nomor-4">
-<h4>4. Soal nomor 4<a class="headerlink" href="#soal-nomor-4" title="Link to this heading">#</a></h4>
-<p><span class="math notranslate nohighlight">\(\begin{aligned}
-\quad x_1 + x_2 &amp;= 5 \\
-\quad x_1 + 2x_2 &amp;= 6
-\end{aligned}\)</span></p>
-<p><strong>Langkah 1: Representasi Matriks Augmented</strong>
-Kita ubah sistem persamaan menjadi bentuk matriks augmented:</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-1 &amp; 1 &amp; | 5 \\
-1 &amp; 2 &amp; | 6
-\end{bmatrix}\)</span></p>
-<p><strong>Langkah 2: Eliminasi Baris</strong>
-Kita eliminasi elemen di bawah pivot pertama. Caranya, kurangkan baris kedua dengan baris pertama:</p>
-<p><span class="math notranslate nohighlight">\(R_2 = R_2 - R_1\)</span></p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-1 &amp; 1 &amp; | 5 \\
-0 &amp; 1 &amp; | 1
-\end{bmatrix}\)</span></p>
-<p><strong>Langkah 3: Substitusi Balik</strong>
-Dari baris kedua:</p>
-<p><span class="math notranslate nohighlight">\(x_2 = 1\)</span></p>
-<p>Substitusi <span class="math notranslate nohighlight">\(( x_2 = 1 )\)</span> ke dalam baris pertama:</p>
-<p><span class="math notranslate nohighlight">\(x_1 + 1 = 5\)</span></p>
-<p><span class="math notranslate nohighlight">\(x_1 = 4\)</span></p>
-<p><strong>Hasil Akhir</strong>
-Solusi unik:</p>
-<p><span class="math notranslate nohighlight">\((x_1, x_2) = (4, 1)\)</span></p>
-<p>Jadi, sistem ini memiliki <strong>solusi tunggal</strong> yaitu <strong><span class="math notranslate nohighlight">\(( x_1 = 4 )\)</span>, <span class="math notranslate nohighlight">\(( x_2 = 1 )\)</span></strong>.</p>
-</section>
-</section>
+<ol class="arabic simple" start="2">
+<li><p>Jika vektor tersebut diputar sebesar <span class="math notranslate nohighlight">\(\theta\)</span>, maka posisinya menjadi:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{v'} = (r \cos(\alpha + \theta),\ r \sin(\alpha + \theta))
+\]</div>
+<ol class="arabic simple" start="3">
+<li><p>Gunakan identitas trigonometri sudut jumlah:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\cos(\alpha + \theta) = \cos \alpha \cos \theta - \sin \alpha \sin \theta
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\sin(\alpha + \theta) = \sin \alpha \cos \theta + \cos \alpha \sin \theta
+\]</div>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{v'} = r 
+\begin{bmatrix}
+\cos \alpha \cos \theta - \sin \alpha \sin \theta \\
+\sin \alpha \cos \theta + \cos \alpha \sin \theta
+\end{bmatrix}
+\end{split}\]</div>
+<ol class="arabic simple" start="4">
+<li><p>Karena <span class="math notranslate nohighlight">\(x = r \cos \alpha\)</span> dan <span class="math notranslate nohighlight">\(y = r \sin \alpha\)</span>, maka:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{v'} = 
+\begin{bmatrix}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+\end{split}\]</div>
+<p>Artinya, rotasi memang dapat direpresentasikan oleh matriks di atas.</p>
 </section>
 </section>
 
@@ -618,12 +479,12 @@ Solusi unik:</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="Matrik.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Matrik</p>
       </div>
     </a>
 </div>
@@ -643,16 +504,7 @@ Solusi unik:</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">Operasi Baris Elementer</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemenasi-gauss">Elemenasi Gauss</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-1">1. Soal nomor 1</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-2">2. Soal nomor 2</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-3">3. Soal nomor 3</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-nomor-4">4. Soal nomor 4</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-pembuktian">Langkah-langkah Pembuktian</a></li>
 </ul>
   </nav></div>
 
