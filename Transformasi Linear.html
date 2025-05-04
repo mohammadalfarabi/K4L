@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Notebooks with MyST Markdown &#8212; My sample book</title>
+    <title>Transformasi linier &#8212; Mas KAL</title>
   
   
   
@@ -60,10 +60,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'markdown-notebooks';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Transformasi Linear';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Content with notebooks" href="notebooks.html" />
+    <link rel="prev" title="Matrik" href="Matrik.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -134,7 +136,7 @@
     
   
 
-<a class="navbar-brand logo" href="intro.html">
+<a class="navbar-brand logo" href="SISTEM%20PERSAMAAN%20LINIER.html">
   
   
   
@@ -145,8 +147,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Mas KAL - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Mas KAL - Home"/>
   
   
 </a></div>
@@ -162,15 +164,15 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    Welcome to your Jupyter Book
+                <a class="reference internal" href="SISTEM%20PERSAMAAN%20LINIER.html">
+                    SISTEM PERSAMAAN LINIER
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20Sistem%20persamaan%20linear.html">Penyelesaian Sistem persamaan linear</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Matrik.html">Matrik</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Transformasi linier</a></li>
 </ul>
 
     </div>
@@ -247,7 +249,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmarkdown-notebooks.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTransformasi Linear.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -277,7 +279,7 @@
       
       
       
-      <li><a href="_sources/markdown-notebooks.md" target="_blank"
+      <li><a href="_sources/Transformasi Linear.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -353,7 +355,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Notebooks with MyST Markdown</h1>
+    <h1>Transformasi linier</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -363,9 +365,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-transformasi-rotasi-bidang">Pembuktian Transformasi Rotasi Bidang</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-pembuktian">Langkah-langkah Pembuktian</a></li>
 </ul>
             </nav>
         </div>
@@ -377,50 +378,88 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="notebooks-with-myst-markdown">
-<h1>Notebooks with MyST Markdown<a class="headerlink" href="#notebooks-with-myst-markdown" title="Link to this heading">#</a></h1>
-<p>Jupyter Book also lets you write text-based notebooks using MyST Markdown.
-See <a class="reference external" href="https://jupyterbook.org/file-types/myst-notebooks.html">the Notebooks with MyST Markdown documentation</a> for more detailed instructions.
-This page shows off a notebook written in MyST Markdown.</p>
-<section id="an-example-cell">
-<h2>An example cell<a class="headerlink" href="#an-example-cell" title="Link to this heading">#</a></h2>
-<p>With MyST Markdown, you can define code cells with a directive like so:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<p>When your book is built, the contents of any <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> blocks will be
-executed with your default Jupyter kernel, and their outputs will be displayed
-in-line with the rest of your content.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Jupyter Book uses <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/">Jupytext</a> to convert text-based files to notebooks, and can support <a class="reference external" href="https://jupyterbook.org/file-types/jupytext.html">many other text-based notebook files</a>.</p>
-</div>
-</section>
-<section id="create-a-notebook-with-myst-markdown">
-<h2>Create a notebook with MyST Markdown<a class="headerlink" href="#create-a-notebook-with-myst-markdown" title="Link to this heading">#</a></h2>
-<p>MyST Markdown notebooks are defined by two things:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="transformasi-linier">
+<h1>Transformasi linier<a class="headerlink" href="#transformasi-linier" title="Link to this heading">#</a></h1>
+<p>Transformasi linier adalah konsep fundamental dalam aljabar linear yang menggambarkan pemetaan antara dua ruang vektor dengan mempertahankan struktur liniernya. Artinya, transformasi ini memetakan vektor dari satu ruang ke ruang lain sedemikian rupa sehingga operasi penjumlahan vektor dan perkalian skalar tetap berlaku.</p>
+<p>Secara formal, misalkan terdapat dua ruang vektor, <span class="math notranslate nohighlight">\(V\)</span> dan <span class="math notranslate nohighlight">\(W\)</span>, serta sebuah fungsi <span class="math notranslate nohighlight">\(T: V \rightarrow W\)</span>. Fungsi <span class="math notranslate nohighlight">\(T\)</span> disebut transformasi linier jika memenuhi dua sifat berikut:</p>
 <ol class="arabic simple">
-<li><p>YAML metadata that is needed to understand if / how it should convert text files to notebooks (including information about the kernel needed).
-See the YAML at the top of this page for example.</p></li>
-<li><p>The presence of <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> directives, which will be executed with your book.</p></li>
+<li><p><strong>Additivitas</strong>: <span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span> untuk semua <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v} \in V\)</span>.</p></li>
+<li><p><strong>Homogenitas</strong>: <span class="math notranslate nohighlight">\(T(k\mathbf{u}) = kT(\mathbf{u})\)</span> untuk semua skalar <span class="math notranslate nohighlight">\(k\)</span> dan <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span>.</p></li>
 </ol>
-<p>That’s all that is needed to get started!</p>
+<p>Jika kedua sifat ini terpenuhi, maka <span class="math notranslate nohighlight">\(T\)</span> adalah transformasi linier. </p>
+<p>Contoh transformasi linier meliputi rotasi, dilatasi, refleksi, proyeksi, dan perkalian matriks. Misalnya, fungsi <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> yang didefinisikan oleh <span class="math notranslate nohighlight">\(T(x, y) = (2x, 3y)\)</span> adalah transformasi linier karena memenuhi kedua sifat di atas.</p>
+<p>Transformasi linier dapat direpresentasikan menggunakan matriks. Jika <span class="math notranslate nohighlight">\(T\)</span> adalah transformasi linier dari <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> ke <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>, maka terdapat matriks <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(m \times n\)</span> sehingga untuk setiap vektor <span class="math notranslate nohighlight">\(\mathbf{x} \in \mathbb{R}^n\)</span>, berlaku <span class="math notranslate nohighlight">\(T(\mathbf{x}) = A\mathbf{x}\)</span>.</p>
+<p>Transformasi linier memiliki berbagai aplikasi dalam berbagai bidang, seperti grafika komputer untuk melakukan transformasi gambar, fisika dalam analisis sistem linear, ekonomi dalam pemodelan input-output, dan statistika dalam analisis regresi.</p>
+<section id="pembuktian-transformasi-rotasi-bidang">
+<h2>Pembuktian Transformasi Rotasi Bidang<a class="headerlink" href="#pembuktian-transformasi-rotasi-bidang" title="Link to this heading">#</a></h2>
+<p><img alt="WhatsApp Image 2025-04-28 at 09.11.12_a8f8ac4f" src="https://hackmd.io/_uploads/B1s9qWBllg.jpg" /></p>
+<p>Kita ingin membuktikan bahwa transformasi linier <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> yang merepresentasikan rotasi berlawanan arah jarum jam sebesar sudut <span class="math notranslate nohighlight">\(\theta\)</span>, bisa dinyatakan dengan matriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = 
+\begin{bmatrix}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{bmatrix}
+\end{split}\]</div>
 </section>
-<section id="quickly-add-yaml-metadata-for-myst-notebooks">
-<h2>Quickly add YAML metadata for MyST Notebooks<a class="headerlink" href="#quickly-add-yaml-metadata-for-myst-notebooks" title="Link to this heading">#</a></h2>
-<p>If you have a markdown file and you’d like to quickly add YAML metadata to it, so that Jupyter Book will treat it as a MyST Markdown Notebook, run the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">myst</span> <span class="n">init</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">markdownfile</span><span class="o">.</span><span class="n">md</span>
-</pre></div>
-</div>
+<section id="langkah-langkah-pembuktian">
+<h2>Langkah-langkah Pembuktian<a class="headerlink" href="#langkah-langkah-pembuktian" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Misalkan kita punya vektor <span class="math notranslate nohighlight">\(\mathbf{v} = (x, y)\)</span>. Kita bisa ubah ke bentuk koordinat polar:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{v} = (x, y) = (r \cos \alpha, r \sin \alpha)
+\]</div>
+<p>Di mana:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(r\)</span> adalah panjang dari vektor <span class="math notranslate nohighlight">\(\mathbf{v}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> adalah sudut antara vektor <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> dan sumbu-x positif</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Jika vektor tersebut diputar sebesar <span class="math notranslate nohighlight">\(\theta\)</span>, maka posisinya menjadi:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{v'} = (r \cos(\alpha + \theta),\ r \sin(\alpha + \theta))
+\]</div>
+<ol class="arabic simple" start="3">
+<li><p>Gunakan identitas trigonometri sudut jumlah:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\cos(\alpha + \theta) = \cos \alpha \cos \theta - \sin \alpha \sin \theta
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\sin(\alpha + \theta) = \sin \alpha \cos \theta + \cos \alpha \sin \theta
+\]</div>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{v'} = r 
+\begin{bmatrix}
+\cos \alpha \cos \theta - \sin \alpha \sin \theta \\
+\sin \alpha \cos \theta + \cos \alpha \sin \theta
+\end{bmatrix}
+\end{split}\]</div>
+<ol class="arabic simple" start="4">
+<li><p>Karena <span class="math notranslate nohighlight">\(x = r \cos \alpha\)</span> dan <span class="math notranslate nohighlight">\(y = r \sin \alpha\)</span>, maka:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{v'} = 
+\begin{bmatrix}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+\end{split}\]</div>
+<p>Artinya, rotasi memang dapat direpresentasikan oleh matriks di atas.</p>
 </section>
 </section>
 
@@ -455,12 +494,12 @@ See the YAML at the top of this page for example.</p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="notebooks.html"
+       href="Matrik.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Content with notebooks</p>
+        <p class="prev-next-title">Matrik</p>
       </div>
     </a>
 </div>
@@ -480,9 +519,8 @@ See the YAML at the top of this page for example.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-transformasi-rotasi-bidang">Pembuktian Transformasi Rotasi Bidang</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-pembuktian">Langkah-langkah Pembuktian</a></li>
 </ul>
   </nav></div>
 
@@ -497,7 +535,7 @@ See the YAML at the top of this page for example.</p></li>
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book Community
+By Mohammad Al Farabi Sidqi
 </p>
 
   </div>
