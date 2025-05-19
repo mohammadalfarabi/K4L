@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -574,51 +574,55 @@ y
 \end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">Matrix</span><span class="p">,</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">eye</span><span class="p">,</span> <span class="n">simplify</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">lam</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;λ&#39;</span><span class="p">)</span>
+<span class="c1"># Matriks A</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
 
-<span class="k">def</span> <span class="nf">eigen_sorted</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
-    <span class="n">char_poly</span> <span class="o">=</span> <span class="n">simplify</span><span class="p">((</span><span class="n">M</span> <span class="o">-</span> <span class="n">lam</span> <span class="o">*</span> <span class="n">eye</span><span class="p">(</span><span class="n">M</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span><span class="o">.</span><span class="n">det</span><span class="p">())</span>
-    <span class="n">eigens</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">eigenvects</span><span class="p">()</span>
-    <span class="n">eigens_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">eigens</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">char_poly</span><span class="p">,</span> <span class="n">eigens_sorted</span>
+<span class="c1"># Hitung eigenvalue dan eigenvector A</span>
+<span class="n">eigenvalues_A</span><span class="p">,</span> <span class="n">eigenvectors_A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 
-<span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="c1"># Urutkan indeks berdasarkan eigenvalue dari besar ke kecil</span>
+<span class="n">sorted_indices_A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">eigenvalues_A</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="c1"># Matrix A</span>
-<span class="n">charA</span><span class="p">,</span> <span class="n">eigA</span> <span class="o">=</span> <span class="n">eigen_sorted</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">charA</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">val</span><span class="p">,</span> <span class="n">mult</span><span class="p">,</span> <span class="n">vects</span> <span class="ow">in</span> <span class="n">eigA</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vects</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="c1"># Urutkan eigenvalue dan eigenvector sesuai indeks</span>
+<span class="n">eigenvalues_A_sorted</span> <span class="o">=</span> <span class="n">eigenvalues_A</span><span class="p">[</span><span class="n">sorted_indices_A</span><span class="p">]</span>
+<span class="n">eigenvectors_A_sorted</span> <span class="o">=</span> <span class="n">eigenvectors_A</span><span class="p">[:,</span> <span class="n">sorted_indices_A</span><span class="p">]</span>
 
-<span class="c1"># Matrix B</span>
-<span class="n">charB</span><span class="p">,</span> <span class="n">eigB</span> <span class="o">=</span> <span class="n">eigen_sorted</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">charB</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">val</span><span class="p">,</span> <span class="n">mult</span><span class="p">,</span> <span class="n">vects</span> <span class="ow">in</span> <span class="n">eigB</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vects</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="c1"># Cetak hasil untuk A</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A =&quot;</span><span class="p">,</span> <span class="n">eigenvalues_A_sorted</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eigenvectors_A_sorted</span><span class="p">)</span>
+
+<span class="c1"># Matriks B</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+
+<span class="c1"># Hitung eigenvalue dan eigenvector B</span>
+<span class="n">eigenvalues_B</span><span class="p">,</span> <span class="n">eigenvectors_B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+
+<span class="c1"># Urutkan indeks berdasarkan eigenvalue dari besar ke kecil</span>
+<span class="n">sorted_indices_B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">eigenvalues_B</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Urutkan eigenvalue dan eigenvector sesuai indeks</span>
+<span class="n">eigenvalues_B_sorted</span> <span class="o">=</span> <span class="n">eigenvalues_B</span><span class="p">[</span><span class="n">sorted_indices_B</span><span class="p">]</span>
+<span class="n">eigenvectors_B_sorted</span> <span class="o">=</span> <span class="n">eigenvectors_B</span><span class="p">[:,</span> <span class="n">sorted_indices_B</span><span class="p">]</span>
+
+<span class="c1"># Cetak hasil untuk B</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B =&quot;</span><span class="p">,</span> <span class="n">eigenvalues_B_sorted</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eigenvectors_B_sorted</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix([[3, 0], [0, 3]])
-λ**2 - 6*λ + 9
-3
-Matrix([[1], [0]])
-Matrix([[0], [1]])
-Matrix([[-2, 0], [0, 4]])
-λ**2 - 2*λ - 8
-4
-Matrix([[0], [1]])
--2
-Matrix([[1], [0]])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A = [3. 3.]
+[[0. 1.]
+ [1. 0.]]
+
+B = [ 4. -2.]
+[[0. 1.]
+ [1. 0.]]
 </pre></div>
 </div>
 </div>
