@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Transformasi linier &#8212; Mas KAL</title>
+    <title>Perkalian Titik (Dot Product) &#8212; Mas KAL</title>
   
   
   
@@ -62,11 +62,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Transformasi Linear';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Perkalian Titik';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Refleksi" href="transformasi.html" />
-    <link rel="prev" title="Matrik" href="Matrik.html" />
+    <link rel="prev" title="Eigenvalues dan Eigenvector" href="Eigenvalues_dan_Eigenvector.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -173,7 +172,7 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20Sistem%20persamaan%20linear.html">Penyelesaian Sistem persamaan linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Matrik.html">Matrik</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Transformasi linier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Transformasi%20Linear.html">Transformasi linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="transformasi.html">Refleksi</a></li>
 
 
@@ -181,7 +180,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="tugas.html">Tugas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Eigenvalues_dan_Eigenvector.html">Eigenvalues dan Eigenvector</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Perkalian%20Titik.html">Perkalian Titik (Dot Product)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Perkalian Titik (Dot Product)</a></li>
 </ul>
 
     </div>
@@ -258,7 +257,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTransformasi Linear.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPerkalian Titik.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,7 +287,7 @@
       
       
       
-      <li><a href="_sources/Transformasi Linear.md" target="_blank"
+      <li><a href="_sources/Perkalian Titik.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -298,7 +297,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -364,7 +363,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Transformasi linier</h1>
+    <h1>Perkalian Titik (Dot Product)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -374,8 +373,14 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-transformasi-rotasi-bidang">Pembuktian Transformasi Rotasi Bidang</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-pembuktian">Langkah-langkah Pembuktian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-titik">1. Perkalian Titik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-satuan-mathbb-r-n">2. Vektor satuan <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-vektor-satuan">Membentuk Vektor Satuan</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh :</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -387,88 +392,116 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="transformasi-linier">
-<h1>Transformasi linier<a class="headerlink" href="#transformasi-linier" title="Link to this heading">#</a></h1>
-<p>Transformasi linier adalah konsep fundamental dalam aljabar linear yang menggambarkan pemetaan antara dua ruang vektor dengan mempertahankan struktur liniernya. Artinya, transformasi ini memetakan vektor dari satu ruang ke ruang lain sedemikian rupa sehingga operasi penjumlahan vektor dan perkalian skalar tetap berlaku.</p>
-<p>Secara formal, misalkan terdapat dua ruang vektor, <span class="math notranslate nohighlight">\(V\)</span> dan <span class="math notranslate nohighlight">\(W\)</span>, serta sebuah fungsi <span class="math notranslate nohighlight">\(T: V \rightarrow W\)</span>. Fungsi <span class="math notranslate nohighlight">\(T\)</span> disebut transformasi linier jika memenuhi dua sifat berikut:</p>
-<ol class="arabic simple">
-<li><p><strong>Additivitas</strong>: <span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span> untuk semua <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v} \in V\)</span>.</p></li>
-<li><p><strong>Homogenitas</strong>: <span class="math notranslate nohighlight">\(T(k\mathbf{u}) = kT(\mathbf{u})\)</span> untuk semua skalar <span class="math notranslate nohighlight">\(k\)</span> dan <span class="math notranslate nohighlight">\(\mathbf{u} \in V\)</span>.</p></li>
-</ol>
-<p>Jika kedua sifat ini terpenuhi, maka <span class="math notranslate nohighlight">\(T\)</span> adalah transformasi linier. </p>
-<p>Contoh transformasi linier meliputi rotasi, dilatasi, refleksi, proyeksi, dan perkalian matriks. Misalnya, fungsi <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span> yang didefinisikan oleh <span class="math notranslate nohighlight">\(T(x, y) = (2x, 3y)\)</span> adalah transformasi linier karena memenuhi kedua sifat di atas.</p>
-<p>Transformasi linier dapat direpresentasikan menggunakan matriks. Jika <span class="math notranslate nohighlight">\(T\)</span> adalah transformasi linier dari <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> ke <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>, maka terdapat matriks <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(m \times n\)</span> sehingga untuk setiap vektor <span class="math notranslate nohighlight">\(\mathbf{x} \in \mathbb{R}^n\)</span>, berlaku <span class="math notranslate nohighlight">\(T(\mathbf{x}) = A\mathbf{x}\)</span>.</p>
-<p>Transformasi linier memiliki berbagai aplikasi dalam berbagai bidang, seperti grafika komputer untuk melakukan transformasi gambar, fisika dalam analisis sistem linear, ekonomi dalam pemodelan input-output, dan statistika dalam analisis regresi.</p>
-<section id="pembuktian-transformasi-rotasi-bidang">
-<h2>Pembuktian Transformasi Rotasi Bidang<a class="headerlink" href="#pembuktian-transformasi-rotasi-bidang" title="Link to this heading">#</a></h2>
-<p><img alt="WhatsApp Image 2025-04-28 at 09.11.12_a8f8ac4f" src="https://hackmd.io/_uploads/B1s9qWBllg.jpg" /></p>
-<p>Kita ingin membuktikan bahwa transformasi linier <span class="math notranslate nohighlight">\(T: \mathbb{R}^2 \to \mathbb{R}^2\)</span> yang merepresentasikan rotasi berlawanan arah jarum jam sebesar sudut <span class="math notranslate nohighlight">\(\theta\)</span>, bisa dinyatakan dengan matriks:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-A = 
+  <section class="tex2jax_ignore mathjax_ignore" id="perkalian-titik-dot-product">
+<h1>Perkalian Titik (Dot Product)<a class="headerlink" href="#perkalian-titik-dot-product" title="Link to this heading">#</a></h1>
+<section id="perkalian-titik">
+<h2>1. Perkalian Titik<a class="headerlink" href="#perkalian-titik" title="Link to this heading">#</a></h2>
+<p>Dalam bagian ini, kita memperkenalkan operasi aljabar sederhana yang dikenal sebagai hasil kali titik (dot product), yang membantu kita mengukur panjang vektor dan sudut yang dibentuk oleh sepasang vektor. Untuk vektor-vektor dua dimensi v dan w, hasil kali titik (v · w) didefinisikan sebagai bilangan skalar berikut:</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{v} \cdot \mathbf{w} =
 \begin{bmatrix}
-\cos \theta &amp; -\sin \theta \\
-\sin \theta &amp; \cos \theta
+v_1 \\
+v_2
 \end{bmatrix}
-\end{split}\]</div>
+\cdot
+\begin{bmatrix}
+w_1 \\
+w_2
+\end{bmatrix}
+= v_1w_1 + v_2w_2.\)</span></p>
+<p>Sebagai contoh,</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+2 \\
+-3
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+4 \\
+1
+\end{bmatrix}
+= 2 \cdot 4 + (-3) \cdot 1 = 5.\)</span></p>
+<p>berikut program untuk menghitung dit product (perkalian tiitk dari dua vektor)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dot_product</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">v2</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Panjang kedua vektor harus sama&quot;</span><span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># Contoh penggunaan</span>
+<span class="n">vec1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">vec2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="n">hasil</span> <span class="o">=</span> <span class="n">dot_product</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span> <span class="n">vec2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dot product:&quot;</span><span class="p">,</span> <span class="n">hasil</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dot product: 5
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="langkah-langkah-pembuktian">
-<h2>Langkah-langkah Pembuktian<a class="headerlink" href="#langkah-langkah-pembuktian" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Misalkan kita punya vektor <span class="math notranslate nohighlight">\(\mathbf{v} = (x, y)\)</span>. Kita bisa ubah ke bentuk koordinat polar:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{v} = (x, y) = (r \cos \alpha, r \sin \alpha)
-\]</div>
-<p>Di mana:</p>
+<section id="vektor-satuan-mathbb-r-n">
+<h2>2. Vektor satuan <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span><a class="headerlink" href="#vektor-satuan-mathbb-r-n" title="Link to this heading">#</a></h2>
+<p>Vektor satuan (unit vector) adalah vektor dengan panjang satu.</p>
+<p>Jelas bahwa vektor x adalah vektor satuan jika dan hanya jika:</p>
+<p><span class="math notranslate nohighlight">\(\|\mathbf{x}\|^2 = \mathbf{x} \cdot \mathbf{x} = 1.\)</span></p>
+<section id="membentuk-vektor-satuan">
+<h3>Membentuk Vektor Satuan<a class="headerlink" href="#membentuk-vektor-satuan" title="Link to this heading">#</a></h3>
+<p>Misalkan x adalah vektor tak nol di <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> . Maka:</p>
+<p><span class="math notranslate nohighlight">\(\frac{\mathbf{x}}{\|\mathbf{x}\|}\)</span></p>
+<p>Bukti:</p>
+<p><span class="math notranslate nohighlight">\(\frac{\mathbf{x}}{\|\mathbf{x}\|} \cdot \frac{\mathbf{x}}{\|\mathbf{x}\|} = \frac{\mathbf{x} \cdot \mathbf{x}}{\|\mathbf{x}\|^2} = \frac{\|\mathbf{x}\|^2}{\|\mathbf{x}\|^2} = 1\)</span></p>
+<section id="contoh">
+<h4>Contoh :<a class="headerlink" href="#contoh" title="Link to this heading">#</a></h4>
+<p>Misal <span class="math notranslate nohighlight">\(\mathbf{x} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\)</span>:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(r\)</span> adalah panjang dari vektor <span class="math notranslate nohighlight">\(\mathbf{v}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> adalah sudut antara vektor <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> dan sumbu-x positif</p></li>
+<li><p>Panjang Vektor =
+<span class="math notranslate nohighlight">\(\|\mathbf{x}\| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5.\)</span></p></li>
+<li><p>Vektor satuan =
+<span class="math notranslate nohighlight">\(\mathbf{u} = \frac{\mathbf{x}}{\|\mathbf{x}\|} = \frac{1}{5} \begin{bmatrix} 3 \\ 4 \end{bmatrix} = \begin{bmatrix} \frac{3}{5} \\ \frac{4}{5} \end{bmatrix}.\)</span></p></li>
+<li><p>Verifikasi =
+<span class="math notranslate nohighlight">\(\|\mathbf{u}\| = \sqrt{\left(\frac{3}{5}\right)^2 + \left(\frac{4}{5}\right)^2} = \sqrt{\frac{9}{25} + \frac{16}{25}} = \sqrt{1} = 1.\)</span></p></li>
 </ul>
-<ol class="arabic simple" start="2">
-<li><p>Jika vektor tersebut diputar sebesar <span class="math notranslate nohighlight">\(\theta\)</span>, maka posisinya menjadi:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{v'} = (r \cos(\alpha + \theta),\ r \sin(\alpha + \theta))
-\]</div>
-<ol class="arabic simple" start="3">
-<li><p>Gunakan identitas trigonometri sudut jumlah:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\cos(\alpha + \theta) = \cos \alpha \cos \theta - \sin \alpha \sin \theta
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\sin(\alpha + \theta) = \sin \alpha \cos \theta + \cos \alpha \sin \theta
-\]</div>
-<p>Maka:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\mathbf{v'} = r 
-\begin{bmatrix}
-\cos \alpha \cos \theta - \sin \alpha \sin \theta \\
-\sin \alpha \cos \theta + \cos \alpha \sin \theta
-\end{bmatrix}
-\end{split}\]</div>
-<ol class="arabic simple" start="4">
-<li><p>Karena <span class="math notranslate nohighlight">\(x = r \cos \alpha\)</span> dan <span class="math notranslate nohighlight">\(y = r \sin \alpha\)</span>, maka:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\mathbf{v'} = 
-\begin{bmatrix}
-\cos \theta &amp; -\sin \theta \\
-\sin \theta &amp; \cos \theta
-\end{bmatrix}
-\begin{bmatrix}
-x \\
-y
-\end{bmatrix}
-\end{split}\]</div>
-<p>Artinya, rotasi memang dapat direpresentasikan oleh matriks di atas.</p>
+<p>berikut adalah program for mengkonversi vektor menjadi vektor satuan (vektor memiliki panjang vektor 1)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">def</span> <span class="nf">hitung_panjang_vektor</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">([</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">v</span><span class="p">]))</span>
+
+<span class="k">def</span> <span class="nf">vektor_satuan</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+    <span class="n">panjang</span> <span class="o">=</span> <span class="n">hitung_panjang_vektor</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">panjang</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Vektor nol tidak bisa dikonversi ke vektor satuan.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="o">/</span> <span class="n">panjang</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">v</span><span class="p">]</span>
+
+<span class="c1"># Contoh penggunaan:</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">vektor_satuan</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vektor satuan:&quot;</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>
+
+<span class="c1"># Verifikasi panjang vektor satuan</span>
+<span class="n">panjang_u</span> <span class="o">=</span> <span class="n">hitung_panjang_vektor</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Panjang vektor satuan:&quot;</span><span class="p">,</span> <span class="n">panjang_u</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vektor satuan: [0.6, 0.8]
+Panjang vektor satuan: 1.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 </section>
 
@@ -503,22 +536,13 @@ y
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Matrik.html"
+       href="Eigenvalues_dan_Eigenvector.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Matrik</p>
+        <p class="prev-next-title">Eigenvalues dan Eigenvector</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="transformasi.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Refleksi</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -537,8 +561,14 @@ y
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-transformasi-rotasi-bidang">Pembuktian Transformasi Rotasi Bidang</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-pembuktian">Langkah-langkah Pembuktian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-titik">1. Perkalian Titik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-satuan-mathbb-r-n">2. Vektor satuan <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membentuk-vektor-satuan">Membentuk Vektor Satuan</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh :</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
