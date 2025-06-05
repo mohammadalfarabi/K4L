@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Eigenvalues dan Eigenvector &#8212; Mas KAL</title>
+    <title>Perkalian Silang (Cross Product) &#8212; Mas KAL</title>
   
   
   
@@ -62,11 +62,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Eigenvalues_dan_Eigenvector';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'kalisilang';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Perkalian Titik (Dot Product)" href="Perkalian%20Titik.html" />
-    <link rel="prev" title="Tugas" href="tugas.html" />
+    <link rel="prev" title="Perkalian Titik (Dot Product)" href="Perkalian%20Titik.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -180,9 +179,9 @@
 
 
 <li class="toctree-l1"><a class="reference internal" href="tugas.html">Tugas</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Eigenvalues dan Eigenvector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Eigenvalues_dan_Eigenvector.html">Eigenvalues dan Eigenvector</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Perkalian%20Titik.html">Perkalian Titik (Dot Product)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kalisilang.html">Perkalian Silang (Cross Product)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Perkalian Silang (Cross Product)</a></li>
 </ul>
 
     </div>
@@ -259,7 +258,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FEigenvalues_dan_Eigenvector.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fkalisilang.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -289,7 +288,7 @@
       
       
       
-      <li><a href="_sources/Eigenvalues_dan_Eigenvector.ipynb" target="_blank"
+      <li><a href="_sources/kalisilang.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,7 +364,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Eigenvalues dan Eigenvector</h1>
+    <h1>Perkalian Silang (Cross Product)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -375,12 +374,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#devinisi-eigenvalues-dan-eigenvector">Devinisi eigenvalues dan eigenvector</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvalues-dan-eigenvector-dengan-polynomial-characteristik">Mencari eigenvalues dan eigenvector dengan polynomial characteristik</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a">1. Matriks A</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-b">2. Matriks B</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diberikan">Diberikan:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus">Rumus:</a></li>
 </ul>
             </nav>
         </div>
@@ -392,245 +387,47 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="eigenvalues-dan-eigenvector">
-<h1>Eigenvalues dan Eigenvector<a class="headerlink" href="#eigenvalues-dan-eigenvector" title="Link to this heading">#</a></h1>
-<section id="devinisi-eigenvalues-dan-eigenvector">
-<h2>Devinisi eigenvalues dan eigenvector<a class="headerlink" href="#devinisi-eigenvalues-dan-eigenvector" title="Link to this heading">#</a></h2>
-<p>Eigenvalue dan eigenvector adalah konsep fundamental dalam aljabar linear yang berkaitan dengan transformasi linear suatu matriks. Eigenvector adalah sebuah vektor tidak nol yang arah dan orientasinya tetap saat dikenai transformasi oleh matriks tertentu, meskipun panjangnya bisa berubah. Perubahan panjang ini dinyatakan oleh sebuah skalar yang disebut eigenvalue. Secara matematis, jika sebuah matriks AA dikalikan dengan vektor vv, dan hasilnya adalah kelipatan skalar dari vv, maka vv disebut eigenvector dan skalarnya, yang dilambangkan dengan λλ, disebut eigenvalue. Hubungan ini ditulis dalam bentuk persamaan Av=λvAv=λv.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="perkalian-silang-cross-product">
+<h1>Perkalian Silang (Cross Product)<a class="headerlink" href="#perkalian-silang-cross-product" title="Link to this heading">#</a></h1>
+<p>Perkalian silang atau cross product adalah operasi matematika antara dua vektor tiga dimensi yang menghasilkan vektor baru yang tegak lurus (orthogonal) terhadap kedua vektor asal. Operasi ini hanya berlaku untuk vektor di ruang tiga dimensi (3D).</p>
+<section id="diberikan">
+<h2>Diberikan:<a class="headerlink" href="#diberikan" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{A} = \begin{bmatrix} A_x \\ A_y \\ A_z \end{bmatrix}, \quad \vec{B} = \begin{bmatrix} B_x \\ B_y \\ B_z \end{bmatrix}
+\end{split}\]</div>
 </section>
-<section id="mencari-eigenvalues-dan-eigenvector-dengan-polynomial-characteristik">
-<h2>Mencari eigenvalues dan eigenvector dengan polynomial characteristik<a class="headerlink" href="#mencari-eigenvalues-dan-eigenvector-dengan-polynomial-characteristik" title="Link to this heading">#</a></h2>
+<section id="rumus">
+<h2>Rumus:<a class="headerlink" href="#rumus" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-A = \begin{bmatrix}
-3 &amp; 0 \\
-0 &amp; 3
-\end{bmatrix}
-B = \begin{bmatrix}
--2 &amp; 0 \\
-0 &amp; 4
-\end{bmatrix}\end{split}\]</div>
-<p>urutkan berdasarkan eigenvalues dari besar ke kecil</p>
-<section id="matriks-a">
-<h3>1. Matriks A<a class="headerlink" href="#matriks-a" title="Link to this heading">#</a></h3>
-<p>Pertama-tama Bentuk <span class="math notranslate nohighlight">\(A - \lambda I\)</span></p>
-<p>Kita kurangkan <span class="math notranslate nohighlight">\(\lambda\)</span> dari diagonal (karena <span class="math notranslate nohighlight">\(I\)</span> adalah matriks identitas):</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-A - \lambda I =
+\vec{A} \times \vec{B} =
 \begin{bmatrix}
-3 - \lambda &amp; 0 \\
-0 &amp; 3 - \lambda
+A_yB_z - A_zB_y \\
+-(A_xB_z - A_zB_x) \\
+A_xB_y - A_yB_x
 \end{bmatrix}
 \end{split}\]</div>
-<p>lalu Determinan dari <span class="math notranslate nohighlight">\(A - \lambda I\)</span></p>
-<div class="math notranslate nohighlight">
-\[
-\det(A - \lambda I) = (3 - \lambda)(3 - \lambda) = (3 - \lambda)^2
-\]</div>
-<p>Selanjutnya Polinomial Karakteristik</p>
-<div class="math notranslate nohighlight">
-\[
-(3 - \lambda)^2 = 0
-\Rightarrow \lambda = 3 \quad \text{(dengan multiplikasi 2)}
-\]</div>
-<p>lalu cari Eigenvector</p>
-<p>Selesaikan:</p>
+<p>Contoh:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-(A - 3I)\vec{v} = \vec{0}
-\Rightarrow
+\vec{A} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, \quad \vec{B} = \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{A} \times \vec{B} =
 \begin{bmatrix}
-0 &amp; 0 \\
-0 &amp; 0
-\end{bmatrix}
-\begin{bmatrix}
-x \\
-y
+(2)(6) - (3)(5) \\
+-((1)(6) - (3)(4)) \\
+(1)(5) - (2)(4)
 \end{bmatrix}
 =
 \begin{bmatrix}
-0 \\
-0
+-3 \\
+6 \\
+-3
 \end{bmatrix}
 \end{split}\]</div>
-<p>Sistem ini memberikan solusi:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-x \text{ bebas}, \quad y \text{ bebas} \Rightarrow
-\vec{v} =
-\begin{bmatrix}
-x \\
-y
-\end{bmatrix}, \quad \text{dengan } (x,y) \ne (0,0)
-\end{split}\]</div>
-<p>Artinya, semua vektor tak nol adalah eigenvector untuk <span class="math notranslate nohighlight">\(\lambda = 3\)</span>.</p>
-</section>
-<section id="matriks-b">
-<h3>2. Matriks B<a class="headerlink" href="#matriks-b" title="Link to this heading">#</a></h3>
-<p>Pertama Bentuk <span class="math notranslate nohighlight">\(B - \lambda I\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-B - \lambda I =
-\begin{bmatrix}
--2 - \lambda &amp; 0 \\
-0 &amp; 4 - \lambda
-\end{bmatrix}
-\end{split}\]</div>
-<p>lalu kita cari Determinan</p>
-<div class="math notranslate nohighlight">
-\[
-\det(B - \lambda I) = (-2 - \lambda)(4 - \lambda)
-\]</div>
-<p>Aelanjutnya Polinomial Karakteristik</p>
-<div class="math notranslate nohighlight">
-\[
-(-2 - \lambda)(4 - \lambda) = 0
-\Rightarrow \lambda_1 = -2, \quad \lambda_2 = 4
-\]</div>
-<p>Lalu Cari Eigenvector untuk <span class="math notranslate nohighlight">\(\lambda = -2\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-B - (-2)I = B + 2I =
-\begin{bmatrix}
-0 &amp; 0 \\
-0 &amp; 6
-\end{bmatrix}
-\end{split}\]</div>
-<p>Selesaikan:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-0 &amp; 0 \\
-0 &amp; 6
-\end{bmatrix}
-\begin{bmatrix}
-x \\
-y
-\end{bmatrix}
-=
-\begin{bmatrix}
-0 \\
-0
-\end{bmatrix}
-\Rightarrow
-6y = 0 \Rightarrow y = 0
-\Rightarrow x \text{ bebas}
-\end{split}\]</div>
-<p>Jadi, eigenvectornya:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\vec{v}_1 =
-\begin{bmatrix}
-x \\
-0
-\end{bmatrix}, \quad x \ne 0
-\Rightarrow \vec{v}_1 = x \begin{bmatrix} 1 \\ 0 \end{bmatrix}
-\end{split}\]</div>
-<p>Ambil <span class="math notranslate nohighlight">\(x = 1\)</span>, maka:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\vec{v}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
-\end{split}\]</div>
-<p>lalu Cari Eigenvector untuk <span class="math notranslate nohighlight">\(\lambda = 4\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-B - 4I =
-\begin{bmatrix}
--6 &amp; 0 \\
-0 &amp; 0
-\end{bmatrix}
-\end{split}\]</div>
-<p>Selesaikan:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
--6 &amp; 0 \\
-0 &amp; 0
-\end{bmatrix}
-\begin{bmatrix}
-x \\
-y
-\end{bmatrix}
-=
-\begin{bmatrix}
-0 \\
-0
-\end{bmatrix}
-\Rightarrow
--6x = 0 \Rightarrow x = 0
-\Rightarrow y \text{ bebas}
-\end{split}\]</div>
-<p>Jadi, eigenvectornya:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\vec{v}_2 = \begin{bmatrix}
-0 \\
-y
-\end{bmatrix}, \quad y \ne 0
-\Rightarrow \vec{v}_2 = y \begin{bmatrix} 0 \\ 1 \end{bmatrix}
-\end{split}\]</div>
-<p>Ambil <span class="math notranslate nohighlight">\(y = 1\)</span>, maka:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\vec{v}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
-\end{split}\]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># Matriks A</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
-
-<span class="c1"># Hitung eigenvalue dan eigenvector A</span>
-<span class="n">eigenvalues_A</span><span class="p">,</span> <span class="n">eigenvectors_A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-
-<span class="c1"># Urutkan indeks berdasarkan eigenvalue dari besar ke kecil</span>
-<span class="n">sorted_indices_A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">eigenvalues_A</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="c1"># Urutkan eigenvalue dan eigenvector sesuai indeks</span>
-<span class="n">eigenvalues_A_sorted</span> <span class="o">=</span> <span class="n">eigenvalues_A</span><span class="p">[</span><span class="n">sorted_indices_A</span><span class="p">]</span>
-<span class="n">eigenvectors_A_sorted</span> <span class="o">=</span> <span class="n">eigenvectors_A</span><span class="p">[:,</span> <span class="n">sorted_indices_A</span><span class="p">]</span>
-
-<span class="c1"># Cetak hasil untuk A</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A =&quot;</span><span class="p">,</span> <span class="n">eigenvalues_A_sorted</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">eigenvectors_A_sorted</span><span class="p">)</span>
-
-<span class="c1"># Matriks B</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
-
-<span class="c1"># Hitung eigenvalue dan eigenvector B</span>
-<span class="n">eigenvalues_B</span><span class="p">,</span> <span class="n">eigenvectors_B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
-
-<span class="c1"># Urutkan indeks berdasarkan eigenvalue dari besar ke kecil</span>
-<span class="n">sorted_indices_B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">eigenvalues_B</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="c1"># Urutkan eigenvalue dan eigenvector sesuai indeks</span>
-<span class="n">eigenvalues_B_sorted</span> <span class="o">=</span> <span class="n">eigenvalues_B</span><span class="p">[</span><span class="n">sorted_indices_B</span><span class="p">]</span>
-<span class="n">eigenvectors_B_sorted</span> <span class="o">=</span> <span class="n">eigenvectors_B</span><span class="p">[:,</span> <span class="n">sorted_indices_B</span><span class="p">]</span>
-
-<span class="c1"># Cetak hasil untuk B</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B =&quot;</span><span class="p">,</span> <span class="n">eigenvalues_B_sorted</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">eigenvectors_B_sorted</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A = [3. 3.]
-[[0. 1.]
- [1. 0.]]
-
-B = [ 4. -2.]
-[[0. 1.]
- [1. 0.]]
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 </section>
 
@@ -665,22 +462,13 @@ B = [ 4. -2.]
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="tugas.html"
+       href="Perkalian%20Titik.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tugas</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="Perkalian%20Titik.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Perkalian Titik (Dot Product)</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -699,12 +487,8 @@ B = [ 4. -2.]
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#devinisi-eigenvalues-dan-eigenvector">Devinisi eigenvalues dan eigenvector</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvalues-dan-eigenvector-dengan-polynomial-characteristik">Mencari eigenvalues dan eigenvector dengan polynomial characteristik</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a">1. Matriks A</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-b">2. Matriks B</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diberikan">Diberikan:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus">Rumus:</a></li>
 </ul>
   </nav></div>
 
