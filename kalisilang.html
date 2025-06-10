@@ -394,6 +394,13 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Contoh Perhitungan:</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas">Tugas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-jajaran-genjang-yang-ditentukan-oleh-vektor">1. Luas jajaran genjang yang ditentukan oleh vektor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2. Luas jajaran genjang yang ditentukan oleh vektor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-segitiga-dengan-titik-titik-sudut">3. Luas segitiga dengan titik-titik sudut</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4. Luas segitiga dengan titik-titik sudut</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -652,6 +659,115 @@ a_1 b_2 - a_2 b_1
 \]</div>
 </section>
 </section>
+<section id="tugas">
+<h2>Tugas<a class="headerlink" href="#tugas" title="Link to this heading">#</a></h2>
+<section id="luas-jajaran-genjang-yang-ditentukan-oleh-vektor">
+<h3>1. Luas jajaran genjang yang ditentukan oleh vektor<a class="headerlink" href="#luas-jajaran-genjang-yang-ditentukan-oleh-vektor" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \vec{v} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Gunakan determinan untuk menghitung luas:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{Luas} = |\vec{u} \times \vec{v}| = \left| \begin{vmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{vmatrix} \right| = |(1)(1) - (2)(2)| = |-3| = \boxed{3}
+\end{split}\]</div>
+</section>
+<section id="id2">
+<h3>2. Luas jajaran genjang yang ditentukan oleh vektor<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} = \begin{bmatrix} 2 \\ 0 \end{bmatrix}, \quad \vec{v} = \begin{bmatrix} 0 \\ 3 \end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{Luas} = |\vec{u} \times \vec{v}| = \left| \begin{vmatrix} 2 &amp; 0 \\ 0 &amp; 3 \end{vmatrix} \right| = |(2)(3) - (0)(0)| = \boxed{6}
+\end{split}\]</div>
+</section>
+<section id="luas-segitiga-dengan-titik-titik-sudut">
+<h3>3. Luas segitiga dengan titik-titik sudut<a class="headerlink" href="#luas-segitiga-dengan-titik-titik-sudut" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+A = (0,0,0), \quad B = (1,3,-1), \quad C = (2,1,1)
+\]</div>
+<p>Langkah-langkah:</p>
+<ul>
+<li><p>Vektor AB dan AC:</p>
+<div class="math notranslate nohighlight">
+\[
+   \vec{AB} = B - A = (1,3,-1), \quad \vec{AC} = C - A = (2,1,1)
+   \]</div>
+</li>
+<li><p>Hitung cross product <span class="math notranslate nohighlight">\(\vec{AB} \times \vec{AC}\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{AB} \times \vec{AC} =
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+1 &amp; 3 &amp; -1 \\
+2 &amp; 1 &amp; 1 \\
+\end{vmatrix} = 
+\hat{i}(3\cdot1 - (-1)\cdot1) - \hat{j}(1\cdot1 - (-1)\cdot2) + \hat{k}(1\cdot1 - 3\cdot2) = \hat{i}(4) - \hat{j}(3) + \hat{k}(-5)
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Panjang vektor hasil cross product:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+|\vec{AB} \times \vec{AC}| = \sqrt{4^2 + (-3)^2 + (-5)^2} = \sqrt{16 + 9 + 25} = \sqrt{50}
+\]</div>
+<ul class="simple">
+<li><p>Luas segitiga:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\text{Luas} = \frac{1}{2} |\vec{AB} \times \vec{AC}| = \frac{1}{2} \sqrt{50} = \boxed{\frac{\sqrt{50}}{2}} \approx \boxed{3.54}
+\]</div>
+</section>
+<section id="id3">
+<h3>4. Luas segitiga dengan titik-titik sudut<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+A = (5,2,-1), \quad B = (3,6,2), \quad C = (1,0,4)
+\]</div>
+<ol class="arabic">
+<li><p>Vektor AB dan AC:</p>
+<div class="math notranslate nohighlight">
+\[
+   \vec{AB} = B - A = (-2, 4, 3), \quad \vec{AC} = C - A = (-4, -2, 5)
+   \]</div>
+</li>
+<li><p>Cross product:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{AB} \times \vec{AC} =
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+-2 &amp; 4 &amp; 3 \\
+-4 &amp; -2 &amp; 5 \\
+\end{vmatrix}
+= \hat{i}(4\cdot5 - 3\cdot(-2)) - \hat{j}(-2\cdot5 - 3\cdot(-4)) + \hat{k}(-2\cdot(-2) - 4\cdot(-4)) 
+= \hat{i}(20 + 6) - \hat{j}(-10 + 12) + \hat{k}(4 + 16)
+= \hat{i}(26) - \hat{j}(2) + \hat{k}(20)
+\end{split}\]</div>
+<ol class="arabic simple" start="3">
+<li><p>Panjang vektor hasil cross product:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\sqrt{26^2 + (-2)^2 + 20^2} = \sqrt{676 + 4 + 400} = \sqrt{1080}
+\]</div>
+<ol class="arabic simple" start="4">
+<li><p>Luas segitiga:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\text{Luas} = \frac{1}{2} \sqrt{1080} = \boxed{\frac{\sqrt{1080}}{2}} \approx \boxed{16.43}
+\]</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -728,6 +844,13 @@ a_1 b_2 - a_2 b_1
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-volume-paralelepiped">Rumus Volume Paralelepiped:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan">Penjelasan:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Contoh Perhitungan:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas">Tugas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-jajaran-genjang-yang-ditentukan-oleh-vektor">1. Luas jajaran genjang yang ditentukan oleh vektor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2. Luas jajaran genjang yang ditentukan oleh vektor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#luas-segitiga-dengan-titik-titik-sudut">3. Luas segitiga dengan titik-titik sudut</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4. Luas segitiga dengan titik-titik sudut</a></li>
 </ul>
 </li>
 </ul>
