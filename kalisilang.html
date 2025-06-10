@@ -388,6 +388,12 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-perhitungan">Contoh Perhitungan:</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-paralelepiped-balok-miring-berdimensi-3">Volume paralelepiped (balok miring berdimensi 3)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-volume-paralelepiped">Rumus Volume Paralelepiped:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan">Penjelasan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Contoh Perhitungan:</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -596,6 +602,56 @@ a_1 b_2 - a_2 b_1
 <p>Jadi, luas jajargenjang = <span class="math notranslate nohighlight">\(\sqrt{202}\)</span> satuan luas.</p>
 </section>
 </section>
+<section id="volume-paralelepiped-balok-miring-berdimensi-3">
+<h2>Volume paralelepiped (balok miring berdimensi 3)<a class="headerlink" href="#volume-paralelepiped-balok-miring-berdimensi-3" title="Link to this heading">#</a></h2>
+<section id="rumus-volume-paralelepiped">
+<h3>Rumus Volume Paralelepiped:<a class="headerlink" href="#rumus-volume-paralelepiped" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+\text{Volume} = |\vec{a} \cdot (\vec{b} \times \vec{c})|
+\]</div>
+</section>
+<section id="penjelasan">
+<h3>Penjelasan:<a class="headerlink" href="#penjelasan" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vec{b} \times \vec{c}\)</span> menghasilkan vektor yang tegak lurus bidang alas.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{a} \cdot (\vec{b} \times \vec{c})\)</span> menghitung komponen tinggi dari <span class="math notranslate nohighlight">\(\vec{a}\)</span> terhadap bidang alas.</p></li>
+<li><p>Tanda mutlak (|…|) digunakan karena volume selalu positif.</p></li>
+</ul>
+</section>
+<section id="id1">
+<h3>Contoh Perhitungan:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Misal:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{a} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \quad
+\vec{b} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \quad
+\vec{c} = \begin{bmatrix} 0 \\ 1 \\ 2 \end{bmatrix}
+\end{split}\]</div>
+<p>Langkah 1: Hitung <span class="math notranslate nohighlight">\(\vec{b} \times \vec{c}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{b} \times \vec{c} =
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 2
+\end{vmatrix}
+= \hat{i}(1 \cdot 2 - 0 \cdot 1) - \hat{j}(0 \cdot 2 - 0 \cdot 0) + \hat{k}(0 \cdot 1 - 1 \cdot 0)
+= \begin{bmatrix} 2 \\ 0 \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Langkah 2: Hitung <span class="math notranslate nohighlight">\(\vec{a} \cdot (\vec{b} \times \vec{c})\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{a} \cdot \begin{bmatrix} 2 \\ 0 \\ 0 \end{bmatrix} = 1 \cdot 2 + 0 \cdot 0 + 0 \cdot 0 = 2
+\end{split}\]</div>
+<p>Jadi:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Volume} = |\vec{a} \cdot (\vec{b} \times \vec{c})| = |2| = 2
+\]</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -666,6 +722,12 @@ a_1 b_2 - a_2 b_1
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-umum">Rumus Umum:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-perhitungan">Langkah-Langkah Perhitungan:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-perhitungan">Contoh Perhitungan:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-paralelepiped-balok-miring-berdimensi-3">Volume paralelepiped (balok miring berdimensi 3)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-volume-paralelepiped">Rumus Volume Paralelepiped:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan">Penjelasan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Contoh Perhitungan:</a></li>
 </ul>
 </li>
 </ul>
