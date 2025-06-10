@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -376,6 +376,18 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diberikan">Diberikan:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus">Rumus:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menggunakan-determinan-untuk-menghitung-perkalian-silang-cross-product">Menggunakan determinan untuk menghitung perkalian silang (cross product)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah">Langkah-langkah:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-kali-silang-dan-sudut">Hasil Kali Silang dan Sudut</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-luas-jajar-genjang-dengan-menggunakan-perkalian-silang-vektor">Implementasi luas jajar genjang dengan menggunakan perkalian silang vektor.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-umum">Rumus Umum:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-perhitungan">Langkah-Langkah Perhitungan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-perhitungan">Contoh Perhitungan:</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -428,6 +440,161 @@ A_xB_y - A_yB_x
 -3
 \end{bmatrix}
 \end{split}\]</div>
+</section>
+<section id="menggunakan-determinan-untuk-menghitung-perkalian-silang-cross-product">
+<h2>Menggunakan determinan untuk menghitung perkalian silang (cross product)<a class="headerlink" href="#menggunakan-determinan-untuk-menghitung-perkalian-silang-cross-product" title="Link to this heading">#</a></h2>
+<p>Misalnya:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{a} = \begin{bmatrix} a_1 \\ a_2 \\ a_3 \end{bmatrix}, \quad
+\vec{b} = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix}
+\end{split}\]</div>
+<p>Maka, perkalian silang <span class="math notranslate nohighlight">\(\vec{a} \times \vec{b}\)</span> dapat dihitung menggunakan <strong>determinan matriks 3x3</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{a} \times \vec{b} =
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+a_1 &amp; a_2 &amp; a_3 \\
+b_1 &amp; b_2 &amp; b_3
+\end{vmatrix}
+\end{split}\]</div>
+<section id="langkah-langkah">
+<h3>Langkah-langkah:<a class="headerlink" href="#langkah-langkah" title="Link to this heading">#</a></h3>
+<p>Hitung determinan dengan ekspansi baris pertama:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{a} \times \vec{b} =
+\hat{i}(a_2 b_3 - a_3 b_2) - \hat{j}(a_1 b_3 - a_3 b_1) + \hat{k}(a_1 b_2 - a_2 b_1)
+\]</div>
+<p>Atau dalam bentuk vektor:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{a} \times \vec{b} =
+\begin{bmatrix}
+a_2 b_3 - a_3 b_2 \\
+-(a_1 b_3 - a_3 b_1) \\
+a_1 b_2 - a_2 b_1
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="contoh">
+<h3>Contoh:<a class="headerlink" href="#contoh" title="Link to this heading">#</a></h3>
+<p>Misal:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{a} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, \quad
+\vec{b} = \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}
+\end{split}\]</div>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{a} \times \vec{b} =
+\begin{bmatrix}
+(2)(6) - (3)(5) \\
+-(1)(6) - (3)(4) \\
+(1)(5) - (2)(4)
+\end{bmatrix}
+=
+\begin{bmatrix}
+12 - 15 \\
+-(6 - 12) \\
+5 - 8
+\end{bmatrix}
+=
+\begin{bmatrix}
+-3 \\
+6 \\
+-3
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+</section>
+<section id="hasil-kali-silang-dan-sudut">
+<h2>Hasil Kali Silang dan Sudut<a class="headerlink" href="#hasil-kali-silang-dan-sudut" title="Link to this heading">#</a></h2>
+<p>Jika <span class="math notranslate nohighlight">\(\vec{u}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v}\)</span> adalah vektor tak nol di <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, maka:</p>
+<div class="math notranslate nohighlight">
+\[
+\|\vec{u} \times \vec{v}\| = \|\vec{u}\| \cdot \|\vec{v}\| \cdot \sin(\theta)
+\]</div>
+<p>di mana:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\|\vec{u} \times \vec{v}\|\)</span> adalah magnitudo (panjang) dari hasil cross product</p></li>
+<li><p><span class="math notranslate nohighlight">\(\|\vec{u}\|\)</span> dan <span class="math notranslate nohighlight">\(\|\vec{v}\|\)</span> adalah panjang masing-masing vektor</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta\)</span> adalah sudut antara vektor <span class="math notranslate nohighlight">\(\vec{u}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v}\)</span>, dengan:</p>
+<div class="math notranslate nohighlight">
+\[
+  0 \leq \theta \leq \pi \quad (0^\circ \text{ sampai } 180^\circ)
+  \]</div>
+</li>
+</ul>
+<p>Makna Geometris:</p>
+<ul class="simple">
+<li><p>Cross product menghasilkan vektor yang:</p>
+<ul>
+<li><p>Tegak lurus terhadap <span class="math notranslate nohighlight">\(\vec{u}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v}\)</span></p></li>
+<li><p>Panjangnya sama dengan luas jajargenjang yang dibentuk oleh <span class="math notranslate nohighlight">\(\vec{u}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v}\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="implementasi-luas-jajar-genjang-dengan-menggunakan-perkalian-silang-vektor">
+<h2>Implementasi luas jajar genjang dengan menggunakan perkalian silang vektor.<a class="headerlink" href="#implementasi-luas-jajar-genjang-dengan-menggunakan-perkalian-silang-vektor" title="Link to this heading">#</a></h2>
+<section id="rumus-umum">
+<h3>Rumus Umum:<a class="headerlink" href="#rumus-umum" title="Link to this heading">#</a></h3>
+<p>Misalkan dua vektor <span class="math notranslate nohighlight">\(\vec{a}\)</span> dan <span class="math notranslate nohighlight">\(\vec{b}\)</span> membentuk dua sisi jajargenjang yang saling menempel dari satu titik sudut. Maka:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Luas Jajargenjang} = \|\vec{a} \times \vec{b}\|
+\]</div>
+</section>
+<section id="langkah-langkah-perhitungan">
+<h3>Langkah-Langkah Perhitungan:<a class="headerlink" href="#langkah-langkah-perhitungan" title="Link to this heading">#</a></h3>
+<ol class="arabic">
+<li><p>Hitung <span class="math notranslate nohighlight">\(\vec{a} \times \vec{b}\)</span> (perkalian silang biasa)</p></li>
+<li><p>Hitung panjang (magnitudo) dari hasil tersebut:</p>
+<div class="math notranslate nohighlight">
+\[
+   \|\vec{a} \times \vec{b}\| = \sqrt{x^2 + y^2 + z^2}
+   \]</div>
+</li>
+</ol>
+</section>
+<section id="contoh-perhitungan">
+<h3>Contoh Perhitungan:<a class="headerlink" href="#contoh-perhitungan" title="Link to this heading">#</a></h3>
+<p>Misal:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{a} = \begin{bmatrix} 2 \\ 3 \\ 1 \end{bmatrix}, \quad
+\vec{b} = \begin{bmatrix} 1 \\ 0 \\ 4 \end{bmatrix}
+\end{split}\]</div>
+<p>Langkah 1: Hitung cross product <span class="math notranslate nohighlight">\(\vec{a} \times \vec{b}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{a} \times \vec{b} =
+\begin{vmatrix}
+\hat{i} &amp; \hat{j} &amp; \hat{k} \\
+2 &amp; 3 &amp; 1 \\
+1 &amp; 0 &amp; 4
+\end{vmatrix}
+=
+\hat{i}(3 \cdot 4 - 1 \cdot 0)
+- \hat{j}(2 \cdot 4 - 1 \cdot 1)
++ \hat{k}(2 \cdot 0 - 3 \cdot 1)
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+= \hat{i}(12) - \hat{j}(8 - 1) + \hat{k}(-3)
+= \begin{bmatrix} 12 \\ -7 \\ -3 \end{bmatrix}
+\end{split}\]</div>
+<p>Langkah 2: Hitung panjang vektor hasilnya</p>
+<div class="math notranslate nohighlight">
+\[
+\|\vec{a} \times \vec{b}\| =
+\sqrt{12^2 + (-7)^2 + (-3)^2} = \sqrt{144 + 49 + 9} = \sqrt{202}
+\]</div>
+<p>Jadi, luas jajargenjang = <span class="math notranslate nohighlight">\(\sqrt{202}\)</span> satuan luas.</p>
+</section>
 </section>
 </section>
 
@@ -489,6 +656,18 @@ A_xB_y - A_yB_x
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diberikan">Diberikan:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus">Rumus:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menggunakan-determinan-untuk-menghitung-perkalian-silang-cross-product">Menggunakan determinan untuk menghitung perkalian silang (cross product)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah">Langkah-langkah:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh">Contoh:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-kali-silang-dan-sudut">Hasil Kali Silang dan Sudut</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-luas-jajar-genjang-dengan-menggunakan-perkalian-silang-vektor">Implementasi luas jajar genjang dengan menggunakan perkalian silang vektor.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-umum">Rumus Umum:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-perhitungan">Langkah-Langkah Perhitungan:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-perhitungan">Contoh Perhitungan:</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
